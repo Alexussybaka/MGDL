@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pathfinder_1 : MonoBehaviour
 {
+    [SerializeField] private int possible_outcomes;
+
     [SerializeField] private int x_border;
     [SerializeField] private int y_border;
 
@@ -14,7 +16,7 @@ public class Pathfinder_1 : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(head_pos.position, head_pos.forward);
+        Debug.DrawLine(head_pos.position, head_pos.forward);
 
         //Drawing our x border
         Debug.DrawLine(new Vector3(x_border, 0f, -y_border), new Vector3(x_border, 0f, y_border));
@@ -30,6 +32,8 @@ public class Pathfinder_1 : MonoBehaviour
         {
             DetectetObject();
         }
+
+        possible_outcomes = (x_border * y_border) * 4;
     }
 
     public void DetectetObject()
@@ -61,7 +65,9 @@ public class Pathfinder_1 : MonoBehaviour
         }
         else
         {
-
+            int random_rotation = Random.Range(0, 4) * 90;
+            transform.rotation = Quaternion.Euler(0f, random_rotation, 0f);
+            //transform.position = transform.forward += 1;
         }
     }
 }
