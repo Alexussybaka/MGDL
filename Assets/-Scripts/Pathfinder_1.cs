@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Pathfinder_1 : MonoBehaviour
 {
-    private int x_border;
-    private int y_border;
+    [SerializeField] private int x_border;
+    [SerializeField] private int y_border;
 
     private RaycastHit hit;
 
@@ -16,6 +16,15 @@ public class Pathfinder_1 : MonoBehaviour
     {
         Debug.DrawRay(head_pos.position, head_pos.forward);
 
+        //Drawing our x border
+        Debug.DrawLine(new Vector3(x_border, 0f, -y_border), new Vector3(x_border, 0f, y_border));
+        Debug.DrawLine(new Vector3(-x_border, 0f, -y_border), new Vector3(-x_border, 0f, y_border));
+
+        //Drawing our y border
+        Debug.DrawLine(new Vector3(-x_border, 0f, y_border), new Vector3(x_border, 0f, y_border));
+        Debug.DrawLine(new Vector3(-x_border, 0f, -y_border), new Vector3(x_border, 0f, -y_border));
+
+        //Ray instancing
         Ray ray = new Ray(head_pos.position, head_pos.forward);
         if (Physics.Raycast(ray, out hit, ray_distance))
         {
@@ -30,11 +39,27 @@ public class Pathfinder_1 : MonoBehaviour
 
     public void MakeMove()
     {
-        if(transform.position.x == x_border || transform.position.x == -x_border)
+        if(transform.position.x == x_border)
         {
-
+            transform.rotation = Quaternion.Euler(0f, -180, 0f);
+            transform.position += new Vector3(-1f, 0f, 0f);
         } 
-        if(transform.position.z == y_border || transform.position.z == -y_border)
+        else if(transform.position.x == -x_border)
+        {
+            transform.rotation = Quaternion.Euler(0f, 180, 0f);
+            transform.position += new Vector3(1f, 0f, 0f);
+        }
+        else if(transform.position.z == y_border)
+        {
+            transform.rotation = Quaternion.Euler(0f, -90, 0f);
+            transform.position += new Vector3(-1f, 0f, 0f);
+        }
+        else if(transform.position.z == -y_border)
+        {
+            transform.rotation = Quaternion.Euler(0f, 90, 0f);
+            transform.position += new Vector3(-1f, 0f, 0f);
+        }
+        else
         {
 
         }
