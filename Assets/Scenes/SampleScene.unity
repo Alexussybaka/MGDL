@@ -356,6 +356,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 5888280261042908823, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      propertyPath: period
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888280261042908823, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      propertyPath: x_border
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888280261042908823, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      propertyPath: y_border
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
