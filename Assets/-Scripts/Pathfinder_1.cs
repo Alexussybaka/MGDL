@@ -56,22 +56,22 @@ public class Pathfinder_1 : MonoBehaviour
 
     public void MakeMove()
     {
-        if(transform.position.x == x_border)
+        if(transform.position.x >= x_border)
         {
             transform.rotation = Quaternion.Euler(0f, 270, 0f);
             transform.position += transform.forward;
         } 
-        else if(transform.position.x == -x_border)
+        else if(transform.position.x <= -x_border)
         {
             transform.rotation = Quaternion.Euler(0f, 90, 0f);
             transform.position += transform.forward;
         }
-        else if(transform.position.z == y_border)
+        else if(transform.position.z >= y_border)
         {
             transform.rotation = Quaternion.Euler(0f, 180, 0f);
             transform.position += transform.forward;
         }
-        else if(transform.position.z == -y_border)
+        else if(transform.position.z <= -y_border)
         {
             transform.rotation = Quaternion.Euler(0f, 0, 0f);
             transform.position += transform.forward;
