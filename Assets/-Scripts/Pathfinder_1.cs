@@ -11,7 +11,6 @@ public class Pathfinder_1 : MonoBehaviour
 
     private RaycastHit hit;
 
-    [SerializeField] private Transform head_pos;
     [SerializeField] private float ray_distance;
 
     private float elapsed_time;
@@ -19,7 +18,7 @@ public class Pathfinder_1 : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawLine(head_pos.position, head_pos.forward);
+        Debug.DrawLine(new Vector3(transform.position.x, 1f, transform.position.z), transform.forward);
 
         //Drawing our x border
         Debug.DrawLine(new Vector3(x_border, 0f, -y_border), new Vector3(x_border, 0f, y_border));
@@ -30,7 +29,7 @@ public class Pathfinder_1 : MonoBehaviour
         Debug.DrawLine(new Vector3(-x_border, 0f, -y_border), new Vector3(x_border, 0f, -y_border));
 
         //Ray instancing
-        Ray ray = new Ray(head_pos.position, head_pos.forward);
+        Ray ray = new Ray(new Vector3(transform.position.x, 1f, transform.position.z), transform.forward);
         if (Physics.Raycast(ray, out hit, ray_distance))
         {
             DetectetObject();
@@ -51,7 +50,7 @@ public class Pathfinder_1 : MonoBehaviour
 
     public void DetectetObject()
     {
-
+        Debug.Log("Your robot is facing an object");
     }
 
     public void MakeMove()
