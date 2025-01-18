@@ -331,7 +331,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359361484}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 319052433989d5547a91e6caf72db774, type: 3}
   m_Name: 
@@ -343,7 +343,21 @@ MonoBehaviour:
   - coordinate: {x: 4, y: 8}
   - coordinate: {x: 0, y: 2}
   current_destination: 0
-  period: 0.1
+  period: 0.5
+--- !u!114 &1359361490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359361484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a81bcc4b05ccb0468e6154f01f7f51b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perimeter: 12
+  x: 0
 --- !u!1001 &4125975139319460769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392,6 +406,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4992520493790841097, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5550738746552682926, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
       propertyPath: m_Name
       value: NPC
@@ -426,6 +444,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5550738746552682926, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1359361489}
+    - targetCorrespondingSourceObject: {fileID: 5550738746552682926, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1359361490}
   m_SourcePrefab: {fileID: 100100000, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
