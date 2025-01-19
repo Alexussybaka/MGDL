@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 public class Triangle_Controller : MonoBehaviour
 {
     [SerializeField] float triangle_a, triangle_b, triangle_c;
+
+    //Set the side you want to calculate based on change of another side. Ticking all true can cause null outcome.
     [SerializeField] bool unknown_a, unknown_b, unknown_c;
+    
     [SerializeField] float triangle_area;
 
     private void Update()
