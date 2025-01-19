@@ -351,7 +351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359361484}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a81bcc4b05ccb0468e6154f01f7f51b, type: 3}
   m_Name: 
@@ -366,6 +366,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163016934944657849, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3992824599530718758, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -408,6 +412,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4992520493790841097, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992520493790841097, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5550738746552682926, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
