@@ -380,6 +380,22 @@ MonoBehaviour:
   unknown_b: 0
   unknown_c: 0
   triangle_area: 0
+--- !u!114 &1359361495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359361484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19161dbbe6f1dc47a78d37a6d360abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subdivisions_count: 2
+  radius: 2.43
+  center: {x: 0, y: 0, z: 0}
+  area: 0
 --- !u!1001 &4125975139319460769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -480,6 +496,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5550738746552682926, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1359361491}
+    - targetCorrespondingSourceObject: {fileID: 5550738746552682926, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1359361495}
   m_SourcePrefab: {fileID: 100100000, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
