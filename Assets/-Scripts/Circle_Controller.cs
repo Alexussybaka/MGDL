@@ -43,8 +43,7 @@ public class Circle_Controller : MonoBehaviour
         {
             Debug.DrawLine(rotated_points[i], rotated_points[i+1]);
         }
-        Debug.DrawLine(rotated_points[rotated_points.Count], rotated_points[0]);
-
+        Debug.DrawLine(rotated_points[rotated_points.Count-1], rotated_points[0]);
 
         rotated_points.Clear();
     }
