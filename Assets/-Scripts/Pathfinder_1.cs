@@ -6,12 +6,13 @@ public class Pathfinder_1 : MonoBehaviour
 {
     [SerializeField] private int possible_outcomes;
 
+    [Header("Exploring Border")]
     [SerializeField] private int x_border;
     [SerializeField] private int y_border;
 
-    private RaycastHit hit;
+    //private RaycastHit hit;
 
-    [SerializeField] private float ray_distance;
+    //[SerializeField] private float ray_distance;
 
     private float elapsed_time;
     [SerializeField] private float period;
@@ -29,11 +30,11 @@ public class Pathfinder_1 : MonoBehaviour
         Debug.DrawLine(new Vector3(-x_border, 0f, -y_border), new Vector3(x_border, 0f, -y_border));
 
         //Ray instancing
-        Ray ray = new Ray(new Vector3(transform.position.x, 1f, transform.position.z), transform.forward);
-        if (Physics.Raycast(ray, out hit, ray_distance))
-        {
-            DetectetObject();
-        }
+        //Ray ray = new Ray(new Vector3(transform.position.x, 1f, transform.position.z), transform.forward);
+        //if (Physics.Raycast(ray, out hit, ray_distance))
+        //{
+        //    DetectetObject();
+        //}
 
         //Callculating all possiblke outcomes depending on our seeking area.
         possible_outcomes = (x_border * y_border) * 4;
