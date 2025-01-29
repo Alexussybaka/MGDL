@@ -10,6 +10,9 @@ My project contains these scripts:
 - Pathfinder_3.cs
 - Triangle_Controller.cs
 
+
+More description about each script:
+
 Area_Calculator.cs
 - Will always visualise the biggest possible are with given perimeter. (Note that the perimeter you give script should be hlaf of actual perimeter)
 - By changing value x you will create your own rectangle which perimeter is always static and connected to the "perimeter" variable.
