@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Pathfinder_3 : MonoBehaviour
 {
+    [Header("Properties")]
     [SerializeField] private List<Coordinate> coordinates;
-
     [SerializeField] private int current_destination = 0;
-
-    private float elapsed_time;
     [SerializeField] private float period;
+    
+    private float elapsed_time;
 
     private void Update()
     {

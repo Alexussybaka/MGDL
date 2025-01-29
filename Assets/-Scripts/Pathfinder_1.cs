@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Pathfinder_1 : MonoBehaviour
 {
-    [SerializeField] private int possible_outcomes;
 
     [Header("Exploring Border")]
     [SerializeField] private int x_border;
     [SerializeField] private int y_border;
+    
+    [Space]
+    [Header("Other Info : Read Only")]
+    [SerializeField] private int possible_outcomes;
 
     //private RaycastHit hit;
 

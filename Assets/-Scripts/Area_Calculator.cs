@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Area_Calculator : MonoBehaviour
 {
+    [Header("Properties")]
     [SerializeField] private float perimeter;
     [SerializeField] private float x;
 
