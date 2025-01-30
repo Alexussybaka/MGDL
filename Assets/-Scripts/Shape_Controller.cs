@@ -21,7 +21,7 @@ public class Shape_Controller : MonoBehaviour
             Debug.DrawLine(new Vector3(vertexes[i].x, 0f, vertexes[i].y), new Vector3(vertexes[i + 1].x, 0f, vertexes[i + 1].y));
         }
 
-        if (bridge_ends) Debug.DrawLine(vertexes[0], vertexes[vertexes.Count - 1]);
+        if (bridge_ends) Debug.DrawLine(new Vector3(vertexes[0].x, 0f, vertexes[0].y), new Vector3(vertexes[vertexes.Count - 1].x, 0f, vertexes[vertexes.Count - 1].y));
 
         if (fill)
         {
@@ -34,10 +34,11 @@ public class Shape_Controller : MonoBehaviour
             }
         }
 
-        area = calculating_area();
+        area = CalculateArea();
     }
 
-    public float calculating_area()
+    // Using "Shoelace" formula to calculate area of not self-intersecting shape.
+    public float CalculateArea()
     {
         int n = vertexes.Count;
         if (n < 3) return 0; 
