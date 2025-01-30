@@ -35,6 +35,7 @@ public class Shape_Controller : MonoBehaviour
         }
 
         area = CalculateArea();
+        perimeter = CalculatePerimeter();
     }
 
     // Using "Shoelace" formula to calculate area of not self-intersecting shape.
@@ -53,5 +54,18 @@ public class Shape_Controller : MonoBehaviour
         }
 
         return Mathf.Abs(area) * 0.5f;
+    }
+
+    //Calculating perimeter variable
+    public float CalculatePerimeter()
+    {
+        float perimeter = 0f;
+
+        for (int i = 0; i < vertexes.Count - 1; i++)
+        {
+            perimeter += Vector2.Distance(vertexes[i], vertexes[i + 1]);
+        }
+
+        return perimeter;
     }
 }
