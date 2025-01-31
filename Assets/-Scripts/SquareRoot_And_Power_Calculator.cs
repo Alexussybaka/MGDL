@@ -6,9 +6,10 @@ public class SquareRoot_And_Power_Calculator : MonoBehaviour
 {
     [SerializeField] bool horizontal;
     [SerializeField] float limit;
+    [SerializeField] float resolution;
     [SerializeField] int power;
 
-    private List<Vector3> vectors;
+    private List<Vector3> vectors = new List<Vector3>();
 
     public void Update()
     {
@@ -22,6 +23,13 @@ public class SquareRoot_And_Power_Calculator : MonoBehaviour
             else vectors.Add(new Vector3(Mathf.Pow(i, power), 0f, i));
         }
 
+        // Drawing all lines
+        for (int i = 0; i < vectors.Count - 1; i++)
+        {
+            Debug.DrawLine(vectors[i], vectors[i + 1]);
+        }
 
+        // Reseting the list, so we can change parameter and see it in real time.
+        vectors.Clear();
     }
 }
