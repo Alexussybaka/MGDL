@@ -15,6 +15,7 @@ public class SquareRoot_And_Power_Calculator : MonoBehaviour
     [Header("Analyzed Number")]
     [SerializeField] float number;
     [SerializeField] bool is_power;
+    [Space]
     [SerializeField] float evaluation;
 
 
@@ -41,7 +42,12 @@ public class SquareRoot_And_Power_Calculator : MonoBehaviour
         // Reseting the list, so we can change parameter and see it in real time.
         vectors.Clear();
 
+        Visualise_Examined_Number();
+        
+    }
 
+    public void Visualise_Examined_Number()
+    {
         if (horizontal)
         {
             if (is_power)
