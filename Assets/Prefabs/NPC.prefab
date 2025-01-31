@@ -204,6 +204,8 @@ GameObject:
   - component: {fileID: 3992824599530718758}
   - component: {fileID: 974979313973240546}
   - component: {fileID: 5888280261042908823}
+  - component: {fileID: 3477742928953544282}
+  - component: {fileID: 332320141782577949}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -264,5 +266,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x_border: 0
   y_border: 0
-  head_pos: {fileID: 4271760274056038992}
-  ray_distance: 10
+  possible_outcomes: 0
+  period: 0
+--- !u!114 &3477742928953544282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550738746552682926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295be7b2835ab8e4a958138f4f28c472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x_coordinates: 0
+  y_coordinates: 0
+  period: 0
+--- !u!114 &332320141782577949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550738746552682926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319052433989d5547a91e6caf72db774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coordinates: []
+  current_destination: 0
+  period: 0
