@@ -7,6 +7,7 @@ public class SquareRoot_And_Power_Calculator : MonoBehaviour
     [Header("Graph Settings")]
     [SerializeField] bool horizontal;
     [SerializeField] float limit;
+    [Range(0.05f, 5f)]
     [SerializeField] float resolution;
     [SerializeField] int power;
 
@@ -46,10 +47,22 @@ public class SquareRoot_And_Power_Calculator : MonoBehaviour
             if (is_power)
             {
                 Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
+                Debug.DrawLine(new Vector3(Mathf.Sqrt(number), 0f, 0f), new Vector3(Mathf.Sqrt(number), 0f, -0.5f), Color.blue);
+
+                Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(Mathf.Sqrt(number), 0f, number), Color.green);
+                Debug.DrawLine(new Vector3(Mathf.Sqrt(number), 0f, number), new Vector3(Mathf.Sqrt(number), 0f, 0f), Color.green);
+
+                evaluation = Mathf.Sqrt(number);
             }
             else
             {
                 Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+                Debug.DrawLine(new Vector3(0f, 0f, Mathf.Pow(number, power)), new Vector3(-0.5f, 0f, Mathf.Pow(number, power)), Color.blue);
+
+                Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, Mathf.Pow(number, power)), Color.green);
+                Debug.DrawLine(new Vector3(number, 0f, Mathf.Pow(number, power)), new Vector3(0f, 0f, Mathf.Pow(number, power)), Color.green);
+
+                evaluation = Mathf.Pow(number, power);
             }
         }
         else
@@ -57,10 +70,22 @@ public class SquareRoot_And_Power_Calculator : MonoBehaviour
             if (is_power)
             {
                 Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+                Debug.DrawLine(new Vector3(0f, 0f, Mathf.Sqrt(number)), new Vector3(-0.5f, 0f, Mathf.Sqrt(number)), Color.blue);
+
+                Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, Mathf.Sqrt(number)), Color.green);
+                Debug.DrawLine(new Vector3(number, 0f, Mathf.Sqrt(number)), new Vector3(0f, 0f, Mathf.Sqrt(number)), Color.green);
+
+                evaluation = Mathf.Sqrt(number);
             }
             else
             {
                 Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
+                Debug.DrawLine(new Vector3(Mathf.Pow(number, power), 0f, 0f), new Vector3(Mathf.Pow(number, power), 0f, -0.5f), Color.blue);
+
+                Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(Mathf.Pow(number, power), 0f, number), Color.green);
+                Debug.DrawLine(new Vector3(Mathf.Pow(number, power), 0f, number), new Vector3(Mathf.Pow(number, power), 0f, 0f), Color.green);
+
+                evaluation = Mathf.Pow(number, power);
             }
         }
     }
