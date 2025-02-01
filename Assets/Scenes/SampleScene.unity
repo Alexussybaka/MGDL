@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 332357938}
   - component: {fileID: 332357939}
   - component: {fileID: 332357940}
+  - component: {fileID: 332357941}
   m_Layer: 0
   m_Name: Mathematics
   m_TagString: Untagged
@@ -249,6 +250,18 @@ MonoBehaviour:
   number: 0
   is_power: 0
   evaluation: 0
+--- !u!114 &332357941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332357937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b798962eb9af3542b6034fb10668d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1421255053
 Transform:
   m_ObjectHideFlags: 0
@@ -570,6 +583,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 332320141782577949, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 332320141782577949, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      propertyPath: create_random_points
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 332320141782577949, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
+      propertyPath: coordinates.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3477742928953544282, guid: 7da5847966fc4854d9f5bbc8fe0cb5da, type: 3}
