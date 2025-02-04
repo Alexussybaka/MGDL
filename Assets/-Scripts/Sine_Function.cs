@@ -17,7 +17,7 @@ public class Sine_Function : MonoBehaviour
 
         float circuit = (2 * Mathf.PI) * radius;
 
-        float step = circuit / subdivision_count;
+        float step = circuit / (subdivision_count / frequention);
 
         for (int i = 0; i < subdivision_count; i++)
         {
