@@ -7,6 +7,7 @@ public class Sine_Function : MonoBehaviour
     [Range(1, 360)]
     [SerializeField] int subdivision_count;
     [SerializeField] float radius;
+    [SerializeField] int frequention;
 
     public List<Vector2> posititons;
 
@@ -20,12 +21,12 @@ public class Sine_Function : MonoBehaviour
 
         for (int i = 0; i < subdivision_count; i++)
         {
-            posititons.Add(new Vector2(i * step, Mathf.Sin(angle*i*Mathf.Deg2Rad)));
+            posititons.Add(new Vector2(i * step, Mathf.Sin((angle * i) * (Mathf.PI / 180f)) * radius));
         }
 
         for (int i = 0; i < posititons.Count - 1; i++)
         {
-            Debug.DrawLine(posititons[i], posititons[i + 1]);
+            Debug.DrawLine(new Vector3(posititons[i].x, 0f, posititons[i].y), new Vector3(posititons[i+1].x, 0f, posititons[i+1].y));
         }
 
         posititons.Clear();

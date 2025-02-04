@@ -263,7 +263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subdivision_count: 1
-  radius: 0
+  radius: 3.85
+  posititons: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
