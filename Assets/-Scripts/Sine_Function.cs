@@ -19,11 +19,14 @@ public class Sine_Function : MonoBehaviour
 
         float step = circuit / (subdivision_count / frequention);
 
-        for (int i = 0; i < subdivision_count; i++)
+        for (int f = 0; f < frequention; f++)
         {
-            posititons.Add(new Vector2(i * step, Mathf.Sin((angle * i) * (Mathf.PI / 180f)) * radius));
+            for (int i = 0; i < subdivision_count; i++)
+            {
+                posititons.Add(new Vector2(i * step, Mathf.Sin((angle * i) * (Mathf.PI / 180f)) * radius));
+            }
         }
-
+        
         for (int i = 0; i < posititons.Count - 1; i++)
         {
             Debug.DrawLine(new Vector3(posititons[i].x, 0f, posititons[i].y), new Vector3(posititons[i+1].x, 0f, posititons[i+1].y));
@@ -32,3 +35,4 @@ public class Sine_Function : MonoBehaviour
         posititons.Clear();
     }
 }
+
