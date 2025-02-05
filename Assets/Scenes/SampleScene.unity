@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subdivision_count: 1
   radius: 3.85
+  frequention: 1
   posititons: []
 --- !u!1 &705507993
 GameObject:

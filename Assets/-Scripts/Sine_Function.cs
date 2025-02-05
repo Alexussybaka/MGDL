@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Sine_Function : MonoBehaviour
 {
-    [Range(1, 360)]
+    [Range(1, 90)]
     [SerializeField] int subdivision_count;
     [SerializeField] float radius;
+    [Range(1, 10)]
     [SerializeField] int frequention;
 
     public List<Vector2> posititons;
