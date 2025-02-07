@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Sine_Function : MonoBehaviour
 {
-    [Range(1, 180)]
+    [Range(1, 45)]
     [SerializeField] int subdivision_count;
     [SerializeField] float radius;
-    [Range(1, 10)]
+    [Range(1, 100)]
     [SerializeField] int frequention;
 
     public List<Vector2> posititons;
@@ -20,11 +20,11 @@ public class Sine_Function : MonoBehaviour
 
         float step = (circuit / subdivision_count) / frequention;
 
-        for (int f = 1; f < frequention; f++)
+        for (int f = 1; f < frequention + 1; f++)
         {
             for (int i = 0; i < subdivision_count + 1; i++)
             {
-                posititons.Add(new Vector2((i * step) + ((circuit / frequention) * f), Mathf.Sin((angle * i) * (Mathf.PI / 180f)) * radius));
+                posititons.Add(new Vector2((i * step) + ((circuit / frequention) * f) - (circuit / frequention), Mathf.Sin((angle * i) * (Mathf.PI / 180f)) * radius));
             }
         }
         
@@ -37,7 +37,7 @@ public class Sine_Function : MonoBehaviour
         Debug.DrawLine(new Vector3(0f, 0f, 0f), new Vector3(circuit, 0f, 0f), Color.red);
 
         // Rendering Effective value
-        Debug.DrawLine(new Vector3(0f, 0f, radius * (Mathf.Sqrt(2) / 2)), new Vector3(circuit, 0f, radius * (Mathf.Sqrt(2) / 2)));
+        Debug.DrawLine(new Vector3(0f, 0f, radius * (Mathf.Sqrt(2) / 2)), new Vector3(circuit, 0f, radius * (Mathf.Sqrt(2) / 2)), Color.green);
 
         posititons.Clear();
     }
