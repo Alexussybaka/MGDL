@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 1201477569}
   - component: {fileID: 1201477568}
   - component: {fileID: 1201477567}
+  - component: {fileID: 1201477570}
   m_Layer: 0
   m_Name: Geometria
   m_TagString: Untagged
@@ -541,6 +542,20 @@ MonoBehaviour:
   radius: 0
   center: {x: 0, y: 0, z: 0}
   area: 0
+--- !u!114 &1201477570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201477565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7167a58faad28ee42a6c148053b0866f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 0
+  scale: 0
 --- !u!1 &1421255052
 GameObject:
   m_ObjectHideFlags: 0
