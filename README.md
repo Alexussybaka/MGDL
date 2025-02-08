@@ -8,7 +8,11 @@ My project contains these scripts:
 - Pathfinder_1.cs
 - Pathfinder_2.cs
 - Pathfinder_3.cs
+- Shape_Controller.cs
+- Sine_Function.cs
+- SquareRoot_And_Power_Calculator.cs_
 - Triangle_Controller.cs
+- Triangle_Fractal.cs
 
 
 More description about each script:
@@ -25,14 +29,21 @@ Circle_Controller.cs
 - Read only variable "area" is calculated in real time using this formula (S = PI * radius^2)
 
 Pathfinder_1.cs
-
-
+- Missing
 
 Pathfinder_2.cs
-
+- Missing
 
 Pathfinder_3.cs
+- Missing
 
-
+Shape_Controller.cs_
 
 Triangle_Controller.cs
+- You can change length of sides a and b for triangle to appear. 
+- Area is calculated in real-time based on side length. Using formula (a * b) / 2.
+- Tick pythagorean theorem to calculate unknown side and applky it's length. It also calculates all the angles.
+- By ticking two sides as unknown the triangle will distribute length to both sides based on third value change.
+
+Triangle_Fractal.cs
+- Working on it so I can't tell anything.
