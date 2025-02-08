@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Triangle_Fractal : MonoBehaviour
@@ -9,6 +10,8 @@ public class Triangle_Fractal : MonoBehaviour
 
     private void Update()
     {
+        int function_cycle = stage;
+
         Vector3 high_point = new Vector3(0f, 0f, Mathf.Sqrt(Mathf.Pow(scale, 2) - Mathf.Pow(scale / 2, 2)));
         Vector3 left_pivot = new Vector3(scale / 2, 0f, Mathf.Sqrt(Mathf.Pow(scale, 2) - Mathf.Pow(scale / 2, 2)));
 
@@ -16,18 +19,24 @@ public class Triangle_Fractal : MonoBehaviour
         Debug.DrawLine(new Vector3(-(scale / 2), 0f, 0f), high_point);
         Debug.DrawLine(new Vector3(scale / 2, 0f, 0f), high_point);
 
-        for (int i = 1; i <= stage; i++)
-        {
-            float mid_x = left_pivot.x / Mathf.Pow(2, i);
-            float mid_z = left_pivot.z / Mathf.Pow(2, i);
 
-            Debug.DrawLine(new Vector3(mid_x, 0f, mid_z), new Vector3(-mid_x, 0f, mid_z));
-        }
+
+        //for (int i = 1; i <= stage; i++)
+        //{
+        //    float mid_x = left_pivot.x / Mathf.Pow(2, i);
+        //    float mid_z = left_pivot.z / Mathf.Pow(2, i);
+
+        //    Debug.DrawLine(new Vector3(mid_x, 0f, mid_z), new Vector3(-mid_x, 0f, mid_z));
+        //}
     }
 
-    private void Fractal_Construction(Vector3 high_pivot)
+    private void Fractal_Construction(Vector3 high_pivot, int function_cycle)
     {
         Debug.DrawLine(new Vector3(high_pivot.x / 2, 0f, high_pivot.z), new Vector3(-high_pivot.x / 2, 0f, high_pivot.z));
         Debug.DrawLine(new Vector3(high_pivot.x / 2, 0f, high_pivot.z), new Vector3(scale - scale / Mathf.Pow(2, stage), 0f, 0f));
+
+        high_pivot = new Vector3(scale / 2, 0f, scale / Mathf.Pow(2, stage - function_cycle));
+
+        if (function_cycle > 0) Fractal_Construction(high_pivot, function_cycle - 1);
     }
 }
