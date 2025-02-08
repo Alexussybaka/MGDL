@@ -463,7 +463,6 @@ GameObject:
   - component: {fileID: 1201477569}
   - component: {fileID: 1201477568}
   - component: {fileID: 1201477567}
-  - component: {fileID: 1201477570}
   m_Layer: 0
   m_Name: Geometria
   m_TagString: Untagged
@@ -542,20 +541,6 @@ MonoBehaviour:
   radius: 0
   center: {x: 0, y: 0, z: 0}
   area: 0
---- !u!114 &1201477570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201477565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7167a58faad28ee42a6c148053b0866f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stage: 0
-  scale: 0
 --- !u!1 &1421255052
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +571,52 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4125975139319460770}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2134727709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134727711}
+  - component: {fileID: 2134727710}
+  m_Layer: 0
+  m_Name: Fractals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2134727710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134727709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7167a58faad28ee42a6c148053b0866f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 0
+  scale: 1
+--- !u!4 &2134727711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134727709}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4125975139319460769
@@ -707,3 +738,4 @@ SceneRoots:
   - {fileID: 1421255053}
   - {fileID: 1201477566}
   - {fileID: 332357938}
+  - {fileID: 2134727711}

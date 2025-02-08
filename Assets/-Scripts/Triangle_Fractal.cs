@@ -13,13 +13,14 @@ public class Triangle_Fractal : MonoBehaviour
         int function_cycle = stage;
 
         Vector3 high_point = new Vector3(0f, 0f, Mathf.Sqrt(Mathf.Pow(scale, 2) - Mathf.Pow(scale / 2, 2)));
-        Vector3 left_pivot = new Vector3(scale / 2, 0f, Mathf.Sqrt(Mathf.Pow(scale, 2) - Mathf.Pow(scale / 2, 2)));
+        //Vector3 left_pivot = new Vector3(scale / 2, 0f, Mathf.Sqrt(Mathf.Pow(scale, 2) - Mathf.Pow(scale / 2, 2)));
+        Vector3 high_pivot = new Vector3(scale / 2, 0f, high_point.z / 2);
 
         Debug.DrawLine(new Vector3(-(scale / 2), 0f, 0f), new Vector3(scale / 2, 0f, 0f));
         Debug.DrawLine(new Vector3(-(scale / 2), 0f, 0f), high_point);
         Debug.DrawLine(new Vector3(scale / 2, 0f, 0f), high_point);
 
-
+        Fractal_Construction(high_pivot, function_cycle);
 
         //for (int i = 1; i <= stage; i++)
         //{
