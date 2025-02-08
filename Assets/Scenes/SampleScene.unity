@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subdivision_count: 1
-  radius: 3.85
+  radius: 1
   frequention: 1
   posititons: []
 --- !u!1 &705507993
