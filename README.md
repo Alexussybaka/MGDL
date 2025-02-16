@@ -48,3 +48,5 @@ Triangle_Controller.cs
 
 Triangle_Fractal.cs
 - Working on it so I can't tell anything.
+
+Created by Alexandr Svoboda
