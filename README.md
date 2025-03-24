@@ -1,6 +1,6 @@
 Welcome to the PathFindingProject!
 
-Initially it was planned to be as it is called a path finding project, but throughout a little jhourney I was creating path finding scripts, I learned how to use Debug.DrawLine() function and started vbisualising various mathematical and geometrical things using this function.
+Initially it was planned to be as it is called a path finding project, but throughout a little journey I was creating path finding scripts, I learned how to use Debug.DrawLine() function and started visualising various mathematical and geometrical things using this function.
 
 
 My project contains these scripts:
@@ -11,7 +11,7 @@ My project contains these scripts:
 - Pathfinder_3.cs
 - Shape_Controller.cs
 - Sine_Function.cs
-- SquareRoot_And_Power_Calculator.cs_
+- SquareRoot_And_Power_Calculator.cs
 - Triangle_Controller.cs
 - Triangle_Fractal.cs
 
