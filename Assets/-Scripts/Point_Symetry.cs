@@ -17,7 +17,7 @@ public class Point_Symetry : MonoBehaviour
 
         for (int i = 0; i < vertexes.Count - 1; i++)
         {
-            Debug.DrawLine(new Vector3((2* point.position.x) - vertexes[i].x, 0f, (2 * point.position.y) - vertexes[i].y), new Vector3((2 * point.position.x) - vertexes[i+1].x, 0f, (2 * point.position.y) - vertexes[i+1].y));
+            Debug.DrawLine(new Vector3((2* point.position.x) - vertexes[i].x, 0f, (2 * point.position.z) - vertexes[i].y), new Vector3((2 * point.position.x) - vertexes[i+1].x, 0f, (2 * point.position.z) - vertexes[i+1].y));
         }
     }
 }

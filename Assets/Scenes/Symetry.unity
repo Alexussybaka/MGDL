@@ -197,10 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: {fileID: 134479489}
   vertexes:
-  - {x: 2, y: 3}
-  - {x: 2, y: 4}
-  - {x: 1, y: 4}
-  - {x: 2, y: 0}
+  - {x: 0, y: 3}
+  - {x: 1, y: 3}
 --- !u!1 &1228864252
 GameObject:
   m_ObjectHideFlags: 0
