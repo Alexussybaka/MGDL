@@ -14,7 +14,7 @@ public class Triangle_Fractal : MonoBehaviour
 
         Vector3 high_point = new Vector3(0f, 0f, Mathf.Sqrt(Mathf.Pow(scale, 2) - Mathf.Pow(scale / 2, 2)));
         //Vector3 left_pivot = new Vector3(scale / 2, 0f, Mathf.Sqrt(Mathf.Pow(scale, 2) - Mathf.Pow(scale / 2, 2)));
-        Vector3 high_pivot = new Vector3(scale / 2, 0f, high_point.z / 2);
+        Vector3 high_pivot = new Vector3(scale / 2, 0f, high_point.z);
 
         Debug.DrawLine(new Vector3(-(scale / 2), 0f, 0f), new Vector3(scale / 2, 0f, 0f));
         Debug.DrawLine(new Vector3(-(scale / 2), 0f, 0f), high_point);
@@ -33,10 +33,12 @@ public class Triangle_Fractal : MonoBehaviour
 
     private void Fractal_Construction(Vector3 high_pivot, int function_cycle)
     {
-        Debug.DrawLine(new Vector3(high_pivot.x / 2, 0f, high_pivot.z), new Vector3(-high_pivot.x / 2, 0f, high_pivot.z));
-        Debug.DrawLine(new Vector3(high_pivot.x / 2, 0f, high_pivot.z), new Vector3(scale - scale / Mathf.Pow(2, stage), 0f, 0f));
+        Debug.DrawLine(new Vector3(high_pivot.x / 2, 0f, high_pivot.z / 2), new Vector3(-high_pivot.x / 2, 0f, high_pivot.z / 2));
+        Debug.DrawLine(new Vector3(high_pivot.x / 2, 0f, high_pivot.z/ 2), new Vector3(scale - scale / Mathf.Pow(2, stage), 0f, 0f));
+        Debug.DrawLine(new Vector3(-high_pivot.x / 2, 0f, high_pivot.z/ 2), new Vector3(scale - scale / Mathf.Pow(2, stage), 0f, 0f));
 
-        high_pivot = new Vector3(scale / 2, 0f, scale / Mathf.Pow(2, stage - function_cycle));
+        //high_pivot = new Vector3(scale / 2, 0f, scale / Mathf.Pow(2, stage - function_cycle));
+        high_pivot = new Vector3(scale / 2, 0f, high_pivot.z / 2);
 
         if (function_cycle > 0) Fractal_Construction(high_pivot, function_cycle - 1);
     }
