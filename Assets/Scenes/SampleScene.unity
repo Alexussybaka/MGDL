@@ -461,9 +461,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae20505d08a8704eba71f6c4e9ef35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
   angle: 0
+  radius: 0
   draw_circle: 0
+  subdivision_count: 1
 --- !u!1 &1421255052
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +521,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134727709}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7167a58faad28ee42a6c148053b0866f, type: 3}
   m_Name: 
