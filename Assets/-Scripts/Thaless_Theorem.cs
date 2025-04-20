@@ -26,7 +26,7 @@ public class Thaless_Theorem : MonoBehaviour
         {
             float angle = (360 / 24) / (180 / Mathf.PI);
 
-            for (int i = 1; i < 24 + 1; i++)
+            for (int i = 1; i < 25; i++)
             {
                 float x_pos = radius * Mathf.Cos(angle * i);
                 float y_pos = radius * Mathf.Sin(angle * i);
