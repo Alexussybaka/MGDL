@@ -14,5 +14,8 @@ public class Thaless_Theorem : MonoBehaviour
         Debug.DrawLine(new Vector3(-radius, 0f, 0f), new Vector3(radius, 0f, 0f));
 
         Vector3 right_point = new Vector3(Mathf.Cos(angle * (Mathf.PI / 180f)), 0f, Mathf.Sin(angle * (Mathf.PI / 180f)));
+
+        Debug.DrawLine(new Vector3(radius, 0f, 0f), right_point);
+        Debug.DrawLine(new Vector3(-radius, 0f, 0f), right_point);
     }
 }
