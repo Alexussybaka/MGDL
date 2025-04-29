@@ -5,13 +5,16 @@ Initially it was planned to be as it is called a path finding project, but throu
 
 My project contains these scripts:
 - Area_Calculator.cs
+- Axis_Symetry.cs
 - Circle_Controller.cs
 - Pathfinder_1.cs
 - Pathfinder_2.cs
 - Pathfinder_3.cs
+- Point_Symetry.cs
 - Shape_Controller.cs
 - Sine_Function.cs
 - SquareRoot_And_Power_Calculator.cs
+- Thaless_Theorem.cs
 - Triangle_Controller.cs
 - Triangle_Fractal.cs
 
@@ -21,6 +24,9 @@ More description about each script:
 Area_Calculator.cs
 - Will always visualise the biggest possible are with given perimeter. (Note that the perimeter you give script should be hlaf of actual perimeter)
 - By changing value x you will create your own rectangle which perimeter is always static and connected to the "perimeter" variable.
+
+Axis_Symetry.cs
+- In progress, trying to recreate symetry like mirror with custom axis (function).
 
 Circle_Controller.cs
 - Can be also concidered as cone conroller because there are some bugs I need to fix but until then by changing "center" vector you can create a cone.
@@ -38,7 +44,18 @@ Pathfinder_2.cs
 Pathfinder_3.cs
 - Missing
 
-Shape_Controller.cs_
+Shape_Controller.cs
+- You can create any shape and program using Gauss (Shoelace) theorem will calculate total area of that shape.
+- For calculations to be accurate please ensure that no lines of you shape are intersecting themselves.
+
+Sine_Function.cs
+- Missing
+
+SquareRoot_And_Power_Calculator.cs (Quadratic function)
+- Missing
+
+Thaless_Theorem.cs
+- Missing
 
 Triangle_Controller.cs
 - You can change length of sides a and b for triangle to appear. 
@@ -47,6 +64,6 @@ Triangle_Controller.cs
 - By ticking two sides as unknown the triangle will distribute length to both sides based on third value change.
 
 Triangle_Fractal.cs
-- Working on it so I can't tell anything.
+- On hold
 
 Created by Alexandr Svoboda
