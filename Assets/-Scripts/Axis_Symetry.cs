@@ -10,7 +10,7 @@ public class Axis_Symetry : MonoBehaviour
     [SerializeField] private Vector2 axis_vector;
     [SerializeField] private List<Vector2> vertexes;
 
-    private List<Vector3> picture;
+    private List<Vector3> picture = new List<Vector3>();
 
     private void Update()
     {
@@ -40,11 +40,21 @@ public class Axis_Symetry : MonoBehaviour
                 // Y
                 float middle_y = ((axis_vector.x * vertexes[i].x * axis_vector.y) + (Mathf.Pow(axis_vector.y, 2) * vertexes[i].y)) / det;
 
-                Vector3 middle_point = new Vector3(middle_x, 0, middle_y);
+                Vector3 picture_point = new Vector3((2 * middle_x) - vertexes[i].x, 0f, (2 * middle_y) - vertexes[i].y);
 
-                picture.Add(middle_point);
+                picture.Add(picture_point);
             }
         }
-        
+
+        // Rendering the picture
+        if (picture.Count > 0)
+        {
+            for (int i = 0; i < picture.Count - 1; i++)
+            {
+                Debug.DrawLine(new Vector3(picture[i].x, 0f, picture[i].y), new Vector3(picture[i + 1].x, 0f, picture[i + 1].y));
+            }
+        }
+
+        picture.Clear();
     }
 }

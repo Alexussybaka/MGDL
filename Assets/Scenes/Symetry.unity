@@ -369,9 +369,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b8a1e847901ee4c8c3e7e7eb19d429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis_view_multiplier: 0
-  axis_vector: {x: 0, y: 0}
-  vertexes: []
+  axis_view_multiplier: 21.7
+  axis_vector: {x: 1.94, y: 2.65}
+  vertexes:
+  - {x: 1.54, y: -0.72}
+  - {x: 0.66, y: 1.13}
 --- !u!1 &1985517009
 GameObject:
   m_ObjectHideFlags: 0
