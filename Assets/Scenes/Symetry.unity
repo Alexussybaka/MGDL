@@ -371,6 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis_view_multiplier: 0
   axis_vector: {x: 0, y: 0}
+  vertexes: []
 --- !u!1 &1985517009
 GameObject:
   m_ObjectHideFlags: 0
