@@ -47,7 +47,8 @@ public class Quadratic_Function : MonoBehaviour
         vectors.Clear();
 
         Visualise_Examined_Number();
-        
+        Show_Axis();
+
     }
 
     public void Visualise_Examined_Number()
@@ -102,6 +103,15 @@ public class Quadratic_Function : MonoBehaviour
 
                 evaluation = Mathf.Pow(number, 2);
             }
+        }
+    }
+
+    public void Show_Axis()
+    {
+        if (show_axis)
+        {
+            Debug.DrawLine(new Vector3(-(limit * limit), 0, 0), new Vector3(limit * limit, 0, 0));
+            Debug.DrawLine(new Vector3(0, 0, -(limit * limit)), new Vector3(0, 0, limit * limit));
         }
     }
 }
