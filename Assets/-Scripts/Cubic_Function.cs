@@ -63,7 +63,8 @@ public class Cubic_Function : MonoBehaviour
         {
             if (is_cubed)
             {
-                Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
+                if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
+                else Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(0.5f, 0f, number), Color.red);
 
                 if (number >= 0) Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, -0.5f), Color.blue);
                 else Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, 0.5f), Color.blue);
@@ -75,7 +76,9 @@ public class Cubic_Function : MonoBehaviour
             }
             else
             {
-                Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+                if (number >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+                else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
+                
                 if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, Mathf.Pow(number, 3)), new Vector3(-0.5f, 0f, Mathf.Pow(number, 3)), Color.blue);
                 else Debug.DrawLine(new Vector3(0f, 0f, Mathf.Pow(number, 3)), new Vector3(0.5f, 0f, Mathf.Pow(number, 3)), Color.blue);
 
@@ -89,7 +92,9 @@ public class Cubic_Function : MonoBehaviour
         {
             if (is_cubed)
             {
-                Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+                if (number >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+                else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
+                
                 if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, CubeRoot(number)), new Vector3(-0.5f, 0f, CubeRoot(number)), Color.blue);
                 else Debug.DrawLine(new Vector3(0f, 0f, CubeRoot(number)), new Vector3(0.5f, 0f, CubeRoot(number)), Color.blue);
 
@@ -100,7 +105,9 @@ public class Cubic_Function : MonoBehaviour
             }
             else
             {
-                Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
+                if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
+                else Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(0.5f, 0f, number), Color.red);
+                
                 if (number >= 0) Debug.DrawLine(new Vector3(Mathf.Pow(number, 3), 0f, 0f), new Vector3(Mathf.Pow(number, 3), 0f, -0.5f), Color.blue);
                 else Debug.DrawLine(new Vector3(Mathf.Pow(number, 3), 0f, 0f), new Vector3(Mathf.Pow(number, 3), 0f, 0.5f), Color.blue);
 
