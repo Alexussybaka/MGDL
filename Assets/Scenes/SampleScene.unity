@@ -245,7 +245,6 @@ MonoBehaviour:
   horizontal: 1
   limit: 12.47
   resolution: 0.59
-  power: 2
   number: 0.04
   is_power: 0
   evaluation: 0
@@ -439,7 +438,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201477565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d19161dbbe6f1dc47a78d37a6d360abb, type: 3}
   m_Name: 
