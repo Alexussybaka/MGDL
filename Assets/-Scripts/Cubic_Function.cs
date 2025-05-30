@@ -21,6 +21,12 @@ public class Cubic_Function : MonoBehaviour
 
     private List<Vector3> vectors = new List<Vector3>();
 
+    float CubeRoot(float x)
+    {
+        return x < 0 ? -Mathf.Pow(-x, 1f / 3f) : Mathf.Pow(x, 1f / 3f);
+    }
+
+
     public void Update()
     {
         // Created all negative points to draw line using them.
@@ -59,13 +65,13 @@ public class Cubic_Function : MonoBehaviour
             {
                 Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
 
-                if (number >= 0) Debug.DrawLine(new Vector3(Mathf.Sqrt(number), 0f, 0f), new Vector3(Mathf.Sqrt(number), 0f, -0.5f), Color.blue);
-                else Debug.DrawLine(new Vector3(Mathf.Sqrt(number), 0f, 0f), new Vector3(Mathf.Sqrt(number), 0f, 0.5f), Color.blue);
+                if (number >= 0) Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, -0.5f), Color.blue);
+                else Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, 0.5f), Color.blue);
 
-                Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(Mathf.Sqrt(number), 0f, number), Color.green);
-                Debug.DrawLine(new Vector3(Mathf.Sqrt(number), 0f, number), new Vector3(Mathf.Sqrt(number), 0f, 0f), Color.green);
+                Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(CubeRoot(number), 0f, number), Color.green);
+                Debug.DrawLine(new Vector3(CubeRoot(number), 0f, number), new Vector3(CubeRoot(number), 0f, 0f), Color.green);
 
-                evaluation = Mathf.Sqrt(number);
+                evaluation = CubeRoot(number);
             }
             else
             {
@@ -84,13 +90,13 @@ public class Cubic_Function : MonoBehaviour
             if (is_cubed)
             {
                 Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
-                if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, Mathf.Sqrt(number)), new Vector3(-0.5f, 0f, Mathf.Sqrt(number)), Color.blue);
-                else Debug.DrawLine(new Vector3(0f, 0f, Mathf.Sqrt(number)), new Vector3(0.5f, 0f, Mathf.Sqrt(number)), Color.blue);
+                if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, CubeRoot(number)), new Vector3(-0.5f, 0f, CubeRoot(number)), Color.blue);
+                else Debug.DrawLine(new Vector3(0f, 0f, CubeRoot(number)), new Vector3(0.5f, 0f, CubeRoot(number)), Color.blue);
 
-                Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, Mathf.Sqrt(number)), Color.green);
-                Debug.DrawLine(new Vector3(number, 0f, Mathf.Sqrt(number)), new Vector3(0f, 0f, Mathf.Sqrt(number)), Color.green);
+                Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, CubeRoot(number)), Color.green);
+                Debug.DrawLine(new Vector3(number, 0f, CubeRoot(number)), new Vector3(0f, 0f, CubeRoot(number)), Color.green);
 
-                evaluation = Mathf.Sqrt(number);
+                evaluation = CubeRoot(number);
             }
             else
             {
