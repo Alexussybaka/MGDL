@@ -7,7 +7,6 @@ public class Linear_Function : MonoBehaviour
     [Header("Graph Settings")]
     [Header("y = a * x + b")]
     [SerializeField] float a;
-    [SerializeField] float x;
     [SerializeField] float b;
 
     [SerializeField] bool show_axis;
@@ -24,11 +23,12 @@ public class Linear_Function : MonoBehaviour
         Vector3 first = new Vector3(-1, 0, -a + b);
         Vector3 second = new Vector3(1, 0, a + b);
 
-        first *= limit;
-        second *= limit;
+        //first *= (limit / 2);
+        //second *= (limit / 2);
 
         Debug.DrawLine(first, second);
 
+        Visualise_Examined_Number();
         Show_Axis();
     }
 
@@ -41,10 +41,6 @@ public class Linear_Function : MonoBehaviour
 
         //if (number >= 0) Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, -0.5f), Color.blue);
         //else Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, 0.5f), Color.blue);
-
-        //Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(CubeRoot(number), 0f, number), Color.green);
-        //Debug.DrawLine(new Vector3(CubeRoot(number), 0f, number), new Vector3(CubeRoot(number), 0f, 0f), Color.green);
-        
         
         Debug.DrawLine(new Vector3(number, 0, 0), new Vector3(number, 0, evaluation), Color.green);
         Debug.DrawLine(new Vector3(0, 0, evaluation), new Vector3(number, 0, evaluation), Color.green);
