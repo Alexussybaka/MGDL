@@ -8,7 +8,7 @@ public class Linear_Function : MonoBehaviour
     [Header("y = a * x + b")]
     [SerializeField] float a;
     [SerializeField] float b;
-
+    [Space]
     [SerializeField] bool show_axis;
     [SerializeField] float limit;
 
@@ -20,11 +20,8 @@ public class Linear_Function : MonoBehaviour
 
     private void Update()
     {
-        Vector3 first = new Vector3(-1, 0, -a + b);
-        Vector3 second = new Vector3(1, 0, a + b);
-
-        //first *= (limit / 2);
-        //second *= (limit / 2);
+        Vector3 first = new Vector3(-limit, 0, a * (-limit) + b);
+        Vector3 second = new Vector3(limit, 0, a * limit + b);
 
         Debug.DrawLine(first, second);
 
@@ -36,15 +33,14 @@ public class Linear_Function : MonoBehaviour
     {
         evaluation = a * number + b;
 
-        //if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
-        //else Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(0.5f, 0f, number), Color.red);
+        if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.red);
+        else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.red);
 
-        //if (number >= 0) Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, -0.5f), Color.blue);
-        //else Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, 0.5f), Color.blue);
+        if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.blue);
+        else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.blue);
         
         Debug.DrawLine(new Vector3(number, 0, 0), new Vector3(number, 0, evaluation), Color.green);
-        Debug.DrawLine(new Vector3(0, 0, evaluation), new Vector3(number, 0, evaluation), Color.green);
-        
+        Debug.DrawLine(new Vector3(0, 0, evaluation), new Vector3(number, 0, evaluation), Color.green); 
     }
 
     public void Show_Axis()
