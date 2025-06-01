@@ -119,7 +119,7 @@ public class Cubic_Function : MonoBehaviour
         }
     }
 
-    public void Show_Axis()
+    private void Show_Axis()
     {
         if (show_axis)
         {

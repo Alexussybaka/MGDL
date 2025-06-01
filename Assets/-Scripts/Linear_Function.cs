@@ -43,7 +43,7 @@ public class Linear_Function : MonoBehaviour
         Debug.DrawLine(new Vector3(0, 0, evaluation), new Vector3(number, 0, evaluation), Color.green); 
     }
 
-    public void Show_Axis()
+    private void Show_Axis()
     {
         if (show_axis)
         {
