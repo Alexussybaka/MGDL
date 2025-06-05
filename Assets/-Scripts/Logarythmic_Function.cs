@@ -30,7 +30,7 @@ public class Logarythmic_Function : MonoBehaviour
         {
             if (i == 0) continue;
 
-            vectors.Add(new Vector3(i, 0, Mathf.Log(a, i)));
+            vectors.Add(new Vector3(i, 0, Mathf.Log(i, a)));
         }
 
         for (int i = 0; i < vectors.Count - 1; i++)
@@ -46,7 +46,16 @@ public class Logarythmic_Function : MonoBehaviour
 
     private void Visualise_Examined_Number()
     {
+        evaluation = Mathf.Log(number, a);
 
+        if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.red);
+        else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.red);
+
+        if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.blue);
+        else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.blue);
+
+        Debug.DrawLine(new Vector3(number, 0, 0), new Vector3(number, 0, evaluation), Color.green);
+        Debug.DrawLine(new Vector3(0, 0, evaluation), new Vector3(number, 0, evaluation), Color.green);
     }
 
     private void ShowAxis()
