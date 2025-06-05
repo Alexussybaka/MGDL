@@ -11,7 +11,7 @@ public class Logarythmic_Function : MonoBehaviour
     [Space]
     [SerializeField] bool show_axis;
     [SerializeField] float limit;
-    [Range(0.05f, 5f)]
+    [Range(0.01f, 5f)]
     [SerializeField] float resolution;
 
     [Space]
@@ -26,6 +26,8 @@ public class Logarythmic_Function : MonoBehaviour
     {
         if (a == 0) return;
 
+        if (eulers) a = 2.71828f;
+
         for (float i = resolution; i < limit; i += resolution)
         {
             if (i == 0) continue;
@@ -35,6 +37,7 @@ public class Logarythmic_Function : MonoBehaviour
 
         for (int i = 0; i < vectors.Count - 1; i++)
         {
+            if (vectors[i].x < 0 && vectors[i].x > 0) continue;
             Debug.DrawLine(vectors[i], vectors[i + 1]);
         }
 
