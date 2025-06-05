@@ -25,8 +25,8 @@ public class A_Over_X_Function : MonoBehaviour
     {
         for (float i = -limit; i < limit; i += resolution)
         {
-            if(i == 0 ) continue;
-            if(a / i <= limit) vectors.Add(new Vector3(i, 0, a / i));
+            if(i == 0 || Mathf.Abs(a/i) > limit || i > limit) continue;
+            vectors.Add(new Vector3(i, 0f, a/i));
         }
 
         for (int i = 0; i < vectors.Count - 1; i++)
@@ -35,5 +35,16 @@ public class A_Over_X_Function : MonoBehaviour
         }
 
         vectors.Clear();
+
+        ShowAxis();
+    }
+
+    private void ShowAxis()
+    {
+        if (show_axis)
+        {
+            Debug.DrawLine(new Vector3(-limit, 0, 0), new Vector3(limit, 0, 0));
+            Debug.DrawLine(new Vector3(0, 0, -limit), new Vector3(0, 0, limit));
+        }
     }
 }
