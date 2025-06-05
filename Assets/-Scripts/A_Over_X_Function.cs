@@ -31,6 +31,7 @@ public class A_Over_X_Function : MonoBehaviour
 
         for (int i = 0; i < vectors.Count - 1; i++)
         {
+            if(vectors[i].x < 0 && vectors[i + 1].x > 0) continue;
             Debug.DrawLine(vectors[i], vectors[i + 1]);
         }
 
