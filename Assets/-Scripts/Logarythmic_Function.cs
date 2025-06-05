@@ -26,20 +26,12 @@ public class Logarythmic_Function : MonoBehaviour
     {
         if (a == 0) return;
 
-        for (float i = -limit; i < 0; i += resolution)
+        for (float i = resolution; i < limit; i += resolution)
         {
             if (i == 0) continue;
 
             vectors.Add(new Vector3(i, 0, Mathf.Log(a, i)));
         }
-        
-        for (float i = 0; i < limit; i += resolution)
-        {
-            if (i == 0) continue;
-
-            vectors.Add(new Vector3(i, 0, Mathf.Log(a, i)));
-        }
-
 
         for (int i = 0; i < vectors.Count - 1; i++)
         {
