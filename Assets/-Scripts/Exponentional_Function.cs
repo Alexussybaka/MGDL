@@ -24,6 +24,8 @@ public class Exponentional_Function : MonoBehaviour
 
     private void Update()
     {
+        if (a < 0) a = 0;
+
         if (eulers) a = 2.71828f;
 
         for (float i = -limit; i < limit; i += resolution)
