@@ -33,9 +33,9 @@ public class Incircle_And_Circumcircle : MonoBehaviour
 
         //Circumcircle : Calculation
         float d = 2 * ((A.x * (B.y - C.y)) + (B.x * (C.y - A.y)) + (C.x * (A.y - B.y)));
-
+        
         ci_center.x = (1 / d) * ((((A.x * A.x) + (A.y * A.y)) * (B.y - C.y)) + (((B.x * B.x) + (B.y * B.y)) * (C.y - A.y)) + (((C.x * C.x) + (C.y * C.y)) * (A.y - B.y)));
-        ci_center.y = (1 / d) * ((((A.x * A.x) + (A.y * A.y)) * (C.x - B.x)) + (((B.x * B.x) + (B.y * B.y)) * (A.x - C.x)) + (((C.x * C.x) + (C.y * C.y)) * (B.x - A.x)));
+        ci_center.z = (1 / d) * ((((A.x * A.x) + (A.y * A.y)) * (C.x - B.x)) + (((B.x * B.x) + (B.y * B.y)) * (A.x - C.x)) + (((C.x * C.x) + (C.y * C.y)) * (B.x - A.x)));
 
         ci_radius = Vector3.Distance(ci_center, A);
 
@@ -47,7 +47,7 @@ public class Incircle_And_Circumcircle : MonoBehaviour
             float x_pos = ci_radius * Mathf.Cos(angle * i);
             float y_pos = ci_radius * Mathf.Sin(angle * i);
 
-            Vector3 rotation_point = new Vector3(x_pos, 0f, y_pos);
+            Vector3 rotation_point = new Vector3(x_pos + ci_center.x, 0f, y_pos + ci_center.z);
             ci_rotated_points.Add(rotation_point);
         }
 

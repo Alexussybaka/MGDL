@@ -351,7 +351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332357937}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13604b692f295bf43be2df3b3836324c, type: 3}
   m_Name: 
@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 1201477568}
   - component: {fileID: 1201477567}
   - component: {fileID: 1201477570}
+  - component: {fileID: 1201477571}
   m_Layer: 0
   m_Name: Geometry
   m_TagString: Untagged
@@ -563,6 +564,27 @@ MonoBehaviour:
   radius: 0
   draw_circle: 0
   subdivision_count: 1
+--- !u!114 &1201477571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201477565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff3c61e7060a984f9fecbde2f3d75a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  A: {x: 0, y: 0}
+  B: {x: 0, y: 0}
+  C: {x: 0, y: 0}
+  in_center: {x: 0, y: 0, z: 0}
+  in_radius: 0
+  in_subdivision_count: 0
+  ci_center: {x: 0, y: 0, z: 0}
+  ci_radius: 0
+  ci_subdivision_count: 90
 --- !u!1 &1421255052
 GameObject:
   m_ObjectHideFlags: 0
