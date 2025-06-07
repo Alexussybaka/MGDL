@@ -576,14 +576,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff3c61e7060a984f9fecbde2f3d75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: {x: 0, y: 0}
+  A: {x: 2.92, y: 0}
   B: {x: 0, y: 0}
-  C: {x: 0, y: 0}
+  C: {x: 1.27, y: 2.22}
   in_center: {x: 0, y: 0, z: 0}
   in_radius: 0
-  in_subdivision_count: 0
+  in_subdivision_count: 1
   ci_center: {x: 0, y: 0, z: 0}
-  ci_radius: 0
+  ci_radius: 38.45
   ci_subdivision_count: 90
 --- !u!1 &1421255052
 GameObject:

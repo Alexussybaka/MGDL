@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Incircle_And_Circumcircle : MonoBehaviour
 {
+    [Header("Triangle points")]
     [SerializeField] Vector2 A;
     [SerializeField] Vector2 B;
     [SerializeField] Vector2 C;
 
     [Space]
+    [Header("Incircle Settings")]
     [SerializeField] Vector3 in_center;
     [SerializeField] float in_radius;
+    [Range(1, 180)]
     [SerializeField] int in_subdivision_count;
     private List<Vector3> in_rotated_points = new List<Vector3>();
 
     [Space]
+    [Header("Circumcircle Settings")]
     [SerializeField] Vector3 ci_center;
     [SerializeField] float ci_radius;
+    [Range(1, 180)]
     [SerializeField] int ci_subdivision_count;
     private List<Vector3> ci_rotated_points = new List<Vector3>();
 
