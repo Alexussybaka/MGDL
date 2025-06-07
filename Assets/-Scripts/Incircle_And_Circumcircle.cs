@@ -16,6 +16,13 @@ public class Incircle_And_Circumcircle : MonoBehaviour
 
     private void Update()
     {
-        
+        //Drawing the triangle
+        Debug.DrawLine(new Vector3(A.x, 0f, A.y), new Vector3(B.x, 0f, B.y));
+        Debug.DrawLine(new Vector3(A.x, 0f, A.y), new Vector3(C.x, 0f, C.y));
+        Debug.DrawLine(new Vector3(C.x, 0f, C.y), new Vector3(B.x, 0f, B.y));
+
+        Debug.DrawLine(new Vector3(A.x, 0f, A.y), new Vector3((B.x + C.x) / 2, 0f, (B.y + C.y) / 2));
+        Debug.DrawLine(new Vector3(B.x, 0f, B.y), new Vector3((A.x + C.x) / 2, 0f, (A.y + C.y) / 2));
+        Debug.DrawLine(new Vector3(C.x, 0f, C.y), new Vector3((B.x + A.x) / 2, 0f, (B.y + A.y) / 2));
     }
 }
