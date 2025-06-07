@@ -11,9 +11,13 @@ public class Incircle_And_Circumcircle : MonoBehaviour
     [Space]
     [SerializeField] Vector3 in_center;
     [SerializeField] float in_radius;
-    
+    [SerializeField] int in_subdivision_count;
+    private List<Vector3> in_rotated_points = new List<Vector3>();
+
     [SerializeField] Vector3 ci_center;
     [SerializeField] float ci_radius;
+    [SerializeField] int ci_subdivision_count;
+    private List<Vector3> ci_rotated_points = new List<Vector3>();
 
     private void Update()
     {
@@ -36,6 +40,23 @@ public class Incircle_And_Circumcircle : MonoBehaviour
         ci_radius = Vector3.Distance(ci_center, A);
 
         //Circumcircle : Rendering
+        float angle = (360 / ci_subdivision_count) / (180 / Mathf.PI);
 
+        for (int i = 1; i < ci_subdivision_count + 1; i++)
+        {
+            float x_pos = ci_radius * Mathf.Cos(angle * i);
+            float y_pos = ci_radius * Mathf.Sin(angle * i);
+
+            Vector3 rotation_point = new Vector3(x_pos, 0f, y_pos);
+            ci_rotated_points.Add(rotation_point);
+        }
+
+        for (int i = 0; i < ci_rotated_points.Count - 1; i++)
+        {
+            Debug.DrawLine(ci_rotated_points[i], ci_rotated_points[i + 1]);
+        }
+        Debug.DrawLine(ci_rotated_points[ci_rotated_points.Count - 1], ci_rotated_points[0]);
+
+        ci_rotated_points.Clear();
     }
 }
