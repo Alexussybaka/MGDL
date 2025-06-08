@@ -79,7 +79,7 @@ public class Incircle_And_Circumcircle : MonoBehaviour
         ci_center.y = 0;
         ci_center.z = (1 / d) * ((((A.x * A.x) + (A.y * A.y)) * (C.x - B.x)) + (((B.x * B.x) + (B.y * B.y)) * (A.x - C.x)) + (((C.x * C.x) + (C.y * C.y)) * (B.x - A.x)));
 
-        ci_radius = Vector3.Distance(ci_center, A); // A.y should always stay 0 for code to work propperly
+        ci_radius = Vector3.Distance(ci_center, new Vector3(A.x, 0f, A.y)); 
 
 
         //Circumcircle : Rendering
