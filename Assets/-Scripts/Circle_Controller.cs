@@ -16,12 +16,16 @@ public class Circle_Controller : MonoBehaviour
 
     [Header("Info : Read Only")]
     [SerializeField] float area;
+    [SerializeField] float circumference;
+    [SerializeField] float diameter;
 
     private List<Vector3> rotated_points = new List<Vector3>();
 
     private void Update()
     {
         area = Mathf.PI * (radius * radius);
+        circumference = 2 * Mathf.PI * radius;
+        diameter = 2 * radius;
 
         float angle = (360 / subdivisions_count) / (180 / Mathf.PI);
 
