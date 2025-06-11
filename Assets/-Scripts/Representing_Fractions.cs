@@ -34,7 +34,7 @@ public class Representing_Fractions : MonoBehaviour
             Debug.DrawLine(rotated_points[rotated_points.Count - 1], rotated_points[0]);
 
             Debug.DrawLine(Vector3.zero, new Vector3(10, 0f, 0f));
-            Debug.DrawLine(Vector3.zero, new Vector3(Mathf.Cos(radians_fraction), 0f, Mathf.Sin(radians_fraction)));
+            Debug.DrawLine(Vector3.zero, 10 * new Vector3(Mathf.Cos(radians_fraction), 0f, Mathf.Sin(radians_fraction)));
         }
     }
 }
