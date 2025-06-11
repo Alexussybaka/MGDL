@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 332357944}
   - component: {fileID: 332357945}
   - component: {fileID: 332357946}
+  - component: {fileID: 332357947}
   m_Layer: 0
   m_Name: Mathematics
   m_TagString: Untagged
@@ -363,6 +364,21 @@ MonoBehaviour:
   resolution: 0.01
   number: 0
   evaluation: 0
+--- !u!114 &332357947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332357937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c3ad265c43ce94a8fceae8821d19b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  via_circle: 1
+  fraction_value: 0.5
+  maximum_value: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
