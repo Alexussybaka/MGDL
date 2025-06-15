@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 770761927}
   - component: {fileID: 770761926}
   - component: {fileID: 770761924}
+  - component: {fileID: 770761931}
   m_Layer: 0
   m_Name: Calculus
   m_TagString: Untagged
@@ -695,6 +696,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770761931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770761920}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81e561c1eb8da5479ee1ee67547254b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show_axis: 0
+  limit: 0
+  resolution: 0.05
+  number: 0
+  radians: 0
+  evaluation: 0
 --- !u!1 &1201477565
 GameObject:
   m_ObjectHideFlags: 0

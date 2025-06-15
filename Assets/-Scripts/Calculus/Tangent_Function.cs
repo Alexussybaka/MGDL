@@ -7,7 +7,7 @@ public class Tangent_Function : MonoBehaviour
     [Header("Graph Settings")]
     [SerializeField] bool show_axis;
     [SerializeField] float limit;
-    [Range(0.05f, 5f)]
+    [Range(0.01f, 5f)]
     [SerializeField] float resolution;
 
     [Space]
@@ -30,6 +30,7 @@ public class Tangent_Function : MonoBehaviour
 
         for (int i = 0; i < vectors.Count - 1; i++)
         {
+            if (vectors[i].z > 0 && vectors[i + 1].z < 0) continue;
             Debug.DrawLine(vectors[i], vectors[i + 1]);
         }
 
