@@ -16,4 +16,21 @@ public class Cosine_Function : MonoBehaviour
     [SerializeField] bool radians;
     [Space]
     [SerializeField] float evaluation;
+
+    private List<Vector3> vectors = new List<Vector3>();
+
+    private void Update()
+    {
+        for (float i = 0; i < limit; i += resolution)
+        {
+            vectors.Add(new Vector3(i, 0f, Mathf.Cos(i)));
+        }
+
+        for (int i = 0; i < vectors.Count - 1; i++)
+        {
+            Debug.DrawLine(vectors[i], vectors[i + 1]);
+        }
+
+        vectors.Clear();
+    }
 }
