@@ -33,16 +33,15 @@ public class Axis_Symetry : MonoBehaviour
         }
 
         //Computing new picture point
-        for (int i = 0;i < vertexes.Count - 1; i++)
+        for (int i = 0; i < vertexes.Count; i++)
         {
-            float distance = Mathf.Abs(axis_vector.y * vertexes[i].x - axis_vector.x * vertexes[i].y) / Mathf.Sqrt(Mathf.Pow(axis_vector.y, 2) + Mathf.Pow(axis_vector.x, 2));
+            Vector2 point = vertexes[i];
 
-            Vector2 picture_point = new Vector2(
-                vertexes[i].x * distance,
-                vertexes[i].y * distance
-            );
+            float projection_length = Vector2.Dot(point, axis_vector.normalized);
 
-            picture_point *= right_vector;
+            point = projection_length * axis_vector.normalized;
+
+            Vector2 picture_point = (point * 2) - vertexes[i];
 
             picture.Add(new Vector2(picture_point.x, picture_point.y));
         }
