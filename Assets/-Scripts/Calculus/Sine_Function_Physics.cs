@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sine_Function : MonoBehaviour
+public class Sine_Function_Physics : MonoBehaviour
 {
     [Range(1, 45)]
     [SerializeField] int subdivision_count;
