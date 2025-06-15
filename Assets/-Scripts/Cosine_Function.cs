@@ -32,5 +32,20 @@ public class Cosine_Function : MonoBehaviour
         }
 
         vectors.Clear();
+
+        Visualise_Examined_Number();
+    }
+
+    public void Visualise_Examined_Number()
+    {
+        if (radians) evaluation = Mathf.Cos(number * Mathf.PI);
+        else evaluation = Mathf.Cos(number);
+
+        Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+        if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.blue);
+        else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.blue);
+
+        Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, evaluation), Color.green);
+        Debug.DrawLine(new Vector3(number, 0f, evaluation), new Vector3(0f, 0f, evaluation), Color.green);
     }
 }
