@@ -4,15 +4,78 @@ using UnityEngine;
 
 public class Cotangent_Function : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Graph Settings")]
+    [SerializeField] bool show_axis;
+    [SerializeField] float limit;
+    [Range(0.01f, 5f)]
+    [SerializeField] float resolution;
+
+    [Space]
+    [Header("Analyzed Number")]
+    [SerializeField] float number;
+    [SerializeField] bool radians;
+    [Space]
+    [SerializeField] float evaluation;
+
+    private List<Vector3> vectors = new List<Vector3>();
+
+    private void Update()
     {
-        
+        if (limit < 0) limit = 0;
+
+        for (float i = -limit; i < limit; i += resolution)
+        {
+            if (Mathf.Tan(i) < limit && Mathf.Tan(i) > -limit) vectors.Add(new Vector3(i, 0f, Mathf.Tan(i)));
+        }
+
+        for (int i = 0; i < vectors.Count - 1; i++)
+        {
+            if (vectors[i].z > 0 && vectors[i + 1].z < 0) continue;
+            Debug.DrawLine(vectors[i], vectors[i + 1]);
+        }
+
+        vectors.Clear();
+
+        Visualise_Examined_Number();
+        Show_Axis();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Visualise_Examined_Number()
     {
-        
+        if (radians)
+        {
+            evaluation = Mathf.Tan(number * Mathf.PI);
+
+            if (evaluation >= 0) Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, -0.5f), Color.red);
+            else Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, 0.5f), Color.red);
+
+            if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.blue);
+            else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.blue);
+
+            Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, evaluation), Color.green);
+            Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, evaluation), new Vector3(0f, 0f, evaluation), Color.green);
+        }
+        else
+        {
+            evaluation = Mathf.Tan(number);
+
+            if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+            else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
+
+            if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.blue);
+            else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.blue);
+
+            Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, evaluation), Color.green);
+            Debug.DrawLine(new Vector3(number, 0f, evaluation), new Vector3(0f, 0f, evaluation), Color.green);
+        }
+    }
+
+    public void Show_Axis()
+    {
+        if (show_axis)
+        {
+            Debug.DrawLine(new Vector3(-(limit * limit), 0, 0), new Vector3(limit * limit, 0, 0));
+            Debug.DrawLine(new Vector3(0, 0, -(limit * limit)), new Vector3(0, 0, limit * limit));
+        }
     }
 }
