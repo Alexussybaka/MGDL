@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 770761926}
   - component: {fileID: 770761924}
   - component: {fileID: 770761931}
+  - component: {fileID: 770761932}
   m_Layer: 0
   m_Name: Calculus
   m_TagString: Untagged
@@ -711,6 +712,24 @@ MonoBehaviour:
   show_axis: 0
   limit: 0
   resolution: 0.05
+  number: 0
+  radians: 0
+  evaluation: 0
+--- !u!114 &770761932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770761920}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826b32cf1a3dc5f458fa71f72fd7c960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show_axis: 0
+  limit: 0
+  resolution: 0.01
   number: 0
   radians: 0
   evaluation: 0

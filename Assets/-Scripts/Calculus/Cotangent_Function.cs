@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,18 +20,23 @@ public class Cotangent_Function : MonoBehaviour
 
     private List<Vector3> vectors = new List<Vector3>();
 
+    float Cot(float x)
+    {
+        return 1f / Mathf.Tan(x);
+    }
+
     private void Update()
     {
         if (limit < 0) limit = 0;
 
         for (float i = -limit; i < limit; i += resolution)
         {
-            if (Mathf.Tan(i) < limit && Mathf.Tan(i) > -limit) vectors.Add(new Vector3(i, 0f, Mathf.Tan(i)));
+            if (Cot(i) < limit && Cot(i) > -limit) vectors.Add(new Vector3(i, 0f, Cot(i)));
         }
 
         for (int i = 0; i < vectors.Count - 1; i++)
         {
-            if (vectors[i].z > 0 && vectors[i + 1].z < 0) continue;
+            if (vectors[i].z < 0 && vectors[i + 1].z > 0) continue;
             Debug.DrawLine(vectors[i], vectors[i + 1]);
         }
 
@@ -44,7 +50,7 @@ public class Cotangent_Function : MonoBehaviour
     {
         if (radians)
         {
-            evaluation = Mathf.Tan(number * Mathf.PI);
+            evaluation = Cot(number * Mathf.PI);
 
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, -0.5f), Color.red);
             else Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, 0.5f), Color.red);
@@ -57,7 +63,7 @@ public class Cotangent_Function : MonoBehaviour
         }
         else
         {
-            evaluation = Mathf.Tan(number);
+            evaluation = Cot(number);
 
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
             else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
