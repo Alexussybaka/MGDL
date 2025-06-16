@@ -23,6 +23,15 @@ public class Custom_Function : MonoBehaviour
 
     private void Update()
     {
-        
-    }
+        string[] equation = y_equals.Split(" ");
+        string x_mon = null;
+
+        foreach (string monomial in equation)
+        {
+            if (monomial.EndsWith("x"))
+            {
+                x_mon = monomial;
+                break;
+            }
+        }    }
 }
