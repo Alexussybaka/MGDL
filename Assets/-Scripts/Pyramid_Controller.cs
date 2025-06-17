@@ -18,8 +18,8 @@ public class Pyramid_Controller : MonoBehaviour
         Debug.DrawLine(new Vector3(-width / 2, 0, width / 2), new Vector3(width / 2, 0, width / 2));
 
         //
-        float step_height = height / stairs_count;
-        float width_step = width / stairs_count;
+        float step_height = (height / 2) / stairs_count;
+        float width_step = (width / 2) / stairs_count;
 
         for (int i = 0; i < stairs_count; ++i)
         {
