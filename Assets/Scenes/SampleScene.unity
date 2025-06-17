@@ -192,13 +192,6 @@ GameObject:
   m_Component:
   - component: {fileID: 332357938}
   - component: {fileID: 332357939}
-  - component: {fileID: 332357940}
-  - component: {fileID: 332357942}
-  - component: {fileID: 332357941}
-  - component: {fileID: 332357943}
-  - component: {fileID: 332357944}
-  - component: {fileID: 332357945}
-  - component: {fileID: 332357946}
   - component: {fileID: 332357947}
   - component: {fileID: 332357948}
   m_Layer: 0
@@ -237,134 +230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perimeter: 0
   x: 0
---- !u!114 &332357940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332357937}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65effb5fa2d007046a9059f14b4f0dfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  show_axis: 0
-  limit: 12.47
-  resolution: 0.59
-  number: 0.04
-  is_power: 0
-  evaluation: 0
---- !u!114 &332357941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332357937}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b798962eb9af3542b6034fb10668d3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  subdivision_count: 1
-  radius: 1
-  frequention: 1
-  posititons: []
---- !u!114 &332357942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332357937}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40559ffc47121bd40afc29875fa34cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  show_axis: 0
-  limit: 0
-  resolution: 0.05
-  number: 0
-  is_cubed: 0
-  evaluation: 0
---- !u!114 &332357943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332357937}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f623cba89febf304dab072c42cd70621, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  a: 1
-  b: 1
-  show_axis: 1
-  limit: 5
-  number: 1
-  evaluation: 0
---- !u!114 &332357944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332357937}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d98826f45bfb6c46bb5028b3666ec90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  a: 0
-  eulers: 0
-  show_axis: 0
-  limit: 0
-  resolution: 0.05
-  number: 0
-  evaluation: 0
---- !u!114 &332357945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332357937}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2637c3d09b493e41a08676e14a38068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  a: 3.04
-  show_axis: 0
-  limit: 12
-  resolution: 0.05
-  number: 0
-  evaluation: 0
---- !u!114 &332357946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332357937}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13604b692f295bf43be2df3b3836324c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  a: 0
-  eulers: 0
-  show_axis: 0
-  limit: 0
-  resolution: 0.01
-  number: 0
-  evaluation: 0
 --- !u!114 &332357947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,17 +252,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332357937}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa8a9c85c7149e4e86b6d2fc7533c05, type: 3}
+  m_Script: {fileID: 11500000, guid: a0b8a1e847901ee4c8c3e7e7eb19d429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  show_axis: 0
-  limit: 0
-  resolution: 0.05
-  number: 0
-  radians: 0
-  evaluation: 0
+  axis_view_multiplier: 0
+  axis_vector: {x: 0, y: 0}
+  vertexes: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
