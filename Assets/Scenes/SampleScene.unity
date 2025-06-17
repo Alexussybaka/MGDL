@@ -609,6 +609,7 @@ GameObject:
   - component: {fileID: 1201477567}
   - component: {fileID: 1201477570}
   - component: {fileID: 1201477571}
+  - component: {fileID: 1201477572}
   m_Layer: 0
   m_Name: Geometry
   m_TagString: Untagged
@@ -726,6 +727,21 @@ MonoBehaviour:
   ci_center: {x: 0, y: 0, z: 0}
   ci_radius: 38.45
   ci_subdivision_count: 90
+--- !u!114 &1201477572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201477565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834e4d84ec64ee64fa9c23279a232a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 2.21
+  width: 2.95
+  stairs_count: 5
 --- !u!1 &1421255052
 GameObject:
   m_ObjectHideFlags: 0
