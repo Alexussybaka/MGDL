@@ -1,4 +1,4 @@
 <p align="center">
-# MGDL
-## Mathematic Game Development Library
+  # MGDL
+  ## Mathematic Game Development Library
 </p>
