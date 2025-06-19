@@ -17,20 +17,21 @@ public class Thaless_Theorem : MonoBehaviour
 
     private void Update()
     {
-        //Drawing hypotenuse
+        //Drawing a hypotenuse
         Debug.DrawLine(new Vector3(-radius, 0f, 0f), new Vector3(radius, 0f, 0f));
 
-        //Drawing right angle point
+        //Drawing the right angle point
         Vector3 right_point = new Vector3(Mathf.Cos(angle * (Mathf.PI / 180f)) * radius, 0f, Mathf.Sin(angle * (Mathf.PI / 180f)) * radius);
 
         Debug.DrawLine(new Vector3(radius, 0f, 0f), right_point);
         Debug.DrawLine(new Vector3(-radius, 0f, 0f), right_point);
 
-        //Drawing circle
         if (draw_circle)
         {
+            // Defining angle variable to set a specific resolution for a circle
             float angle = (360 / subdivision_count) / (180 / Mathf.PI);
 
+            // Calculating the circle
             for (int i = 1; i < subdivision_count + 1; i++)
             {
                 float x_pos = radius * Mathf.Cos(angle * i);
@@ -40,6 +41,7 @@ public class Thaless_Theorem : MonoBehaviour
                 rotated_points.Add(rotation_point);
             }
 
+            // Rendering the circle
             for (int i = 0; i < rotated_points.Count - 1; i++)
             {
                 Debug.DrawLine(rotated_points[i], rotated_points[i + 1]);
