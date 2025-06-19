@@ -14,25 +14,17 @@ public class Axis_Symetry : MonoBehaviour
 
     private void Update()
     {
-        //Calculating right-angle vector
-        Vector2 right_vector = new Vector2(
-            axis_vector.y,
-            -axis_vector.x
-        );
-
-        right_vector.Normalize();
-
-        //Drawing axis
+        // Drawing axis
         Debug.DrawLine(Vector3.zero, new Vector3(axis_vector.x, 0f, axis_vector.y) * axis_view_multiplier);
         Debug.DrawLine(Vector3.zero, -new Vector3(axis_vector.x, 0f, axis_vector.y) * axis_view_multiplier);
 
-        //Drawing original shape
+        // Drawing original shape
         for (int i = 0; i < vertexes.Count - 1; i++)
         {
             Debug.DrawLine(new Vector3(vertexes[i].x, 0f, vertexes[i].y), new Vector3(vertexes[i + 1].x, 0f, vertexes[i + 1].y));
         }
 
-        //Computing new picture point
+        // Computing new picture point
         for (int i = 0; i < vertexes.Count; i++)
         {
             Vector2 point = vertexes[i];
