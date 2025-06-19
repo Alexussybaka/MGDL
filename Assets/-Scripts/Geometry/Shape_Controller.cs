@@ -14,13 +14,18 @@ public class Shape_Controller : MonoBehaviour
     [SerializeField] float area;
     [SerializeField] float perimeter;
 
+    // Note that this script is still in development,
+    // so some features of this code might not work properly.
+
     private void Update()
     {
+        // Drawing the shape
         for (int i = 0; i < vertexes.Count - 1; i++)
         {
             Debug.DrawLine(new Vector3(vertexes[i].x, 0f, vertexes[i].y), new Vector3(vertexes[i + 1].x, 0f, vertexes[i + 1].y));
         }
 
+        // Connecting first and last vertex in order to make a loop
         if (bridge_ends) Debug.DrawLine(new Vector3(vertexes[0].x, 0f, vertexes[0].y), new Vector3(vertexes[vertexes.Count - 1].x, 0f, vertexes[vertexes.Count - 1].y));
 
         if (fill)
@@ -56,7 +61,7 @@ public class Shape_Controller : MonoBehaviour
         return Mathf.Abs(area) * 0.5f;
     }
 
-    //Calculating perimeter variable
+    // Calculating perimeter of a shape
     public float CalculatePerimeter()
     {
         float perimeter = 0f;
