@@ -47,6 +47,7 @@ public class Logarythmic_Function : MonoBehaviour
 
         vectors.Clear();
 
+        // Additional features
         Visualise_Examined_Number();
         ShowAxis();
     }

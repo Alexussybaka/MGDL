@@ -21,13 +21,16 @@ public class Cosine_Function : MonoBehaviour
 
     private void Update()
     {
-        if(limit < 0) limit = 0;
+        // Clamping limit to always be a positive number
+        if (limit < 0) limit = 0;
 
+        // Calculating this function with it's limit
         for (float i = -limit; i < limit; i += resolution)
         {
             vectors.Add(new Vector3(i, 0f, Mathf.Cos(i)));
         }
 
+        // Plotting the function
         for (int i = 0; i < vectors.Count - 1; i++)
         {
             Debug.DrawLine(vectors[i], vectors[i + 1]);
@@ -35,6 +38,7 @@ public class Cosine_Function : MonoBehaviour
 
         vectors.Clear();
 
+        // Additional features
         Visualise_Examined_Number();
         Show_Axis();
     }

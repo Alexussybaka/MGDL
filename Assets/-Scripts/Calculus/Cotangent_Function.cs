@@ -27,13 +27,16 @@ public class Cotangent_Function : MonoBehaviour
 
     private void Update()
     {
+        // Clamping limit to always be a positive number
         if (limit < 0) limit = 0;
 
+        // Calculating this function with it's limit
         for (float i = -limit; i < limit; i += resolution)
         {
             if (Cot(i) < limit && Cot(i) > -limit) vectors.Add(new Vector3(i, 0f, Cot(i)));
         }
 
+        // Plotting the function
         for (int i = 0; i < vectors.Count - 1; i++)
         {
             if (vectors[i].z < 0 && vectors[i + 1].z > 0) continue;
@@ -42,6 +45,7 @@ public class Cotangent_Function : MonoBehaviour
 
         vectors.Clear();
 
+        // Additional features
         Visualise_Examined_Number();
         Show_Axis();
     }

@@ -24,15 +24,19 @@ public class Exponentional_Function : MonoBehaviour
 
     private void Update()
     {
+        // Clamping "a" to always be a positive number
         if (a < 0) a = 0;
 
+        // Setting a to Euler's Number
         if (eulers) a = 2.71828f;
 
+        // Calculating this function with it's limit
         for (float i = -limit; i < limit; i += resolution)
         {
             vectors.Add(new Vector3(i, 0f, Mathf.Pow(a, i)));
         }
 
+        // Plotting the function
         for (int i = 0; i < vectors.Count - 1; i++)
         {
             if (vectors[i].z > limit) continue;
@@ -41,6 +45,7 @@ public class Exponentional_Function : MonoBehaviour
 
         vectors.Clear();
 
+        // Additional features
         Visualise_Examined_Number();
         ShowAxis();
     }

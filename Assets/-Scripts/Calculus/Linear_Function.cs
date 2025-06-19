@@ -20,11 +20,14 @@ public class Linear_Function : MonoBehaviour
 
     private void Update()
     {
+        // Calculating this function with it's limit
         Vector3 first = new Vector3(-limit, 0, a * (-limit) + b);
         Vector3 second = new Vector3(limit, 0, a * limit + b);
 
+        // Plotting the function
         Debug.DrawLine(first, second);
 
+        // Additional features
         Visualise_Examined_Number();
         Show_Axis();
     }

@@ -23,12 +23,14 @@ public class A_Over_X_Function : MonoBehaviour
 
     private void Update()
     {
+        // Calculating this function with it's limit
         for (float i = -limit; i < limit; i += resolution)
         {
             if(i == 0 || Mathf.Abs(a/i) > limit || i > limit) continue;
             vectors.Add(new Vector3(i, 0f, a/i));
         }
 
+        // Plotting the function
         for (int i = 0; i < vectors.Count - 1; i++)
         {
             if(vectors[i].x < 0 && vectors[i + 1].x > 0) continue;
@@ -37,6 +39,7 @@ public class A_Over_X_Function : MonoBehaviour
 
         vectors.Clear();
 
+        // Additional features
         Visualise_Examined_Number();
         ShowAxis();
     }
