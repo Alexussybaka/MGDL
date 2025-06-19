@@ -50,12 +50,15 @@ public class Exponentional_Function : MonoBehaviour
         // Calculating evaluation for the analyzed number
         evaluation = Mathf.Pow(a, number);
 
+        // Visualising analyzed number value on Y axis
         if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.red);
         else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.red);
 
+        // Visualising analyzed number value on X axis
         if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.blue);
         else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.blue);
 
+        // Rendering lines that point evaluation on the graph
         Debug.DrawLine(new Vector3(number, 0, 0), new Vector3(number, 0, evaluation), Color.green);
         Debug.DrawLine(new Vector3(0, 0, evaluation), new Vector3(number, 0, evaluation), Color.green);
     }
@@ -64,6 +67,7 @@ public class Exponentional_Function : MonoBehaviour
     {
         if (show_axis)
         {
+            // Plotting X and Y axis
             Debug.DrawLine(new Vector3(-limit, 0, 0), new Vector3(limit, 0, 0));
             Debug.DrawLine(new Vector3(0, 0, -limit), new Vector3(0, 0, limit));
         }

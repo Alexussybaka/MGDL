@@ -73,6 +73,7 @@ public class Logarythmic_Function : MonoBehaviour
     {
         if (show_axis)
         {
+            // Plotting X and Y axis
             Debug.DrawLine(new Vector3(-limit, 0, 0), new Vector3(limit, 0, 0));
             Debug.DrawLine(new Vector3(0, 0, -limit), new Vector3(0, 0, limit));
         }

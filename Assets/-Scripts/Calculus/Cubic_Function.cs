@@ -63,28 +63,36 @@ public class Cubic_Function : MonoBehaviour
         {
             if (is_cubed)
             {
+                // Visualising analyzed number value on Y axis
                 if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
                 else Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(0.5f, 0f, number), Color.red);
 
+                // Visualising analyzed number value on X axis
                 if (number >= 0) Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, -0.5f), Color.blue);
                 else Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, 0.5f), Color.blue);
 
+                // Rendering lines that point evaluation on the graph
                 Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(CubeRoot(number), 0f, number), Color.green);
                 Debug.DrawLine(new Vector3(CubeRoot(number), 0f, number), new Vector3(CubeRoot(number), 0f, 0f), Color.green);
 
+                // Calculating evaluation for the analyzed number
                 evaluation = CubeRoot(number);
             }
             else
             {
+                // Visualising analyzed number value on Y axis
                 if (number >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
                 else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
-                
+
+                // Visualising analyzed number value on X axis
                 if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, Mathf.Pow(number, 3)), new Vector3(-0.5f, 0f, Mathf.Pow(number, 3)), Color.blue);
                 else Debug.DrawLine(new Vector3(0f, 0f, Mathf.Pow(number, 3)), new Vector3(0.5f, 0f, Mathf.Pow(number, 3)), Color.blue);
 
+                // Rendering lines that point evaluation on the graph
                 Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, Mathf.Pow(number, 3)), Color.green);
                 Debug.DrawLine(new Vector3(number, 0f, Mathf.Pow(number, 3)), new Vector3(0f, 0f, Mathf.Pow(number, 3)), Color.green);
 
+                // Calculating evaluation for the analyzed number
                 evaluation = Mathf.Pow(number, 3);
             }
         }
@@ -92,28 +100,36 @@ public class Cubic_Function : MonoBehaviour
         {
             if (is_cubed)
             {
+                // Visualising analyzed number value on Y axis
                 if (number >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
                 else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
-                
+
+                // Visualising analyzed number value on X axis
                 if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, CubeRoot(number)), new Vector3(-0.5f, 0f, CubeRoot(number)), Color.blue);
                 else Debug.DrawLine(new Vector3(0f, 0f, CubeRoot(number)), new Vector3(0.5f, 0f, CubeRoot(number)), Color.blue);
 
+                // Rendering lines that point evaluation on the graph
                 Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, CubeRoot(number)), Color.green);
                 Debug.DrawLine(new Vector3(number, 0f, CubeRoot(number)), new Vector3(0f, 0f, CubeRoot(number)), Color.green);
 
+                // Calculating evaluation for the analyzed number
                 evaluation = CubeRoot(number);
             }
             else
             {
+                // Visualising analyzed number value on Y axis
                 if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
                 else Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(0.5f, 0f, number), Color.red);
-                
+
+                // Visualising analyzed number value on X axis
                 if (number >= 0) Debug.DrawLine(new Vector3(Mathf.Pow(number, 3), 0f, 0f), new Vector3(Mathf.Pow(number, 3), 0f, -0.5f), Color.blue);
                 else Debug.DrawLine(new Vector3(Mathf.Pow(number, 3), 0f, 0f), new Vector3(Mathf.Pow(number, 3), 0f, 0.5f), Color.blue);
 
+                // Rendering lines that point evaluation on the graph
                 Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(Mathf.Pow(number, 3), 0f, number), Color.green);
                 Debug.DrawLine(new Vector3(Mathf.Pow(number, 3), 0f, number), new Vector3(Mathf.Pow(number, 3), 0f, 0f), Color.green);
 
+                // Calculating evaluation for the analyzed number
                 evaluation = Mathf.Pow(number, 3);
             }
         }
@@ -123,6 +139,7 @@ public class Cubic_Function : MonoBehaviour
     {
         if (show_axis)
         {
+            // Plotting X and Y axis
             Debug.DrawLine(new Vector3(-(limit * limit * limit), 0, 0), new Vector3(limit * limit * limit, 0, 0));
             Debug.DrawLine(new Vector3(0, 0, -(limit * limit * limit)), new Vector3(0, 0, limit * limit * limit));
         }

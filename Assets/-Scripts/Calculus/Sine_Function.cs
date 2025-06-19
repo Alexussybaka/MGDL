@@ -46,12 +46,15 @@ public class Sine_Function : MonoBehaviour
             // Calculating evaluation for the analyzed number
             evaluation = Mathf.Sin(number * Mathf.PI);
 
+            // Visualising analyzed number value on Y axis
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, -0.5f), Color.red);
             else Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, 0.5f), Color.red);
 
+            // Visualising analyzed number value on X axis
             if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.blue);
             else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.blue);
 
+            // Rendering lines that point evaluation on the graph
             Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, evaluation), Color.green);
             Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, evaluation), new Vector3(0f, 0f, evaluation), Color.green);
         }
@@ -60,12 +63,15 @@ public class Sine_Function : MonoBehaviour
             // Calculating evaluation for the analyzed number
             evaluation = Mathf.Sin(number);
 
+            // Visualising analyzed number value on Y axis
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
             else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
 
+            // Visualising analyzed number value on X axis
             if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.blue);
             else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.blue);
 
+            // Rendering lines that point evaluation on the graph
             Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, evaluation), Color.green);
             Debug.DrawLine(new Vector3(number, 0f, evaluation), new Vector3(0f, 0f, evaluation), Color.green);
         }
@@ -75,6 +81,7 @@ public class Sine_Function : MonoBehaviour
     {
         if (show_axis)
         {
+            // Plotting X and Y axis
             Debug.DrawLine(new Vector3(-(limit * limit), 0, 0), new Vector3(limit * limit, 0, 0));
             Debug.DrawLine(new Vector3(0, 0, -(limit * limit)), new Vector3(0, 0, limit * limit));
         }
