@@ -31,6 +31,7 @@ public class Linear_Function : MonoBehaviour
 
     public void Visualise_Examined_Number()
     {
+        // Calculating evaluation for the analyzed number
         evaluation = a * number + b;
 
         if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.red);

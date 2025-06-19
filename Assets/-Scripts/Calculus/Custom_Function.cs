@@ -33,5 +33,6 @@ public class Custom_Function : MonoBehaviour
                 x_mon = monomial;
                 break;
             }
-        }    }
+        }    
+    }
 }

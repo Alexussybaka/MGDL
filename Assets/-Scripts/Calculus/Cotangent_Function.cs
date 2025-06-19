@@ -50,6 +50,7 @@ public class Cotangent_Function : MonoBehaviour
     {
         if (radians)
         {
+            // Calculating evaluation for the analyzed number
             evaluation = Cot(number * Mathf.PI);
 
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, -0.5f), Color.red);
@@ -63,6 +64,7 @@ public class Cotangent_Function : MonoBehaviour
         }
         else
         {
+            // Calculating evaluation for the analyzed number
             evaluation = Cot(number);
 
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
