@@ -16,9 +16,9 @@ Things such as _Gaussian Theorem, Axis symetry, Various mathematical functions_ 
    - Cotangent_Function.cs
    - Logarythmic_Function.cs
    - Exponentional_Function.cs
-   - Quadratic_Function.cs - $${\color{lightgreen}Needs an update}$$
-   - Cubic_Function.cs - $${\color{lightgreen}Needs an update}$$
-   - Custom_Function.cs - $${\color{blue}In development}$$
+   - Quadratic_Function.cs - $${\color{lightgreen}Needs\space an\space update}$$
+   - Cubic_Function.cs - $${\color{lightgreen}Needs\space an\space update}$$
+   - Custom_Function.cs - $${\color{blue}In\space development}$$
 2. Geometry:
    - Axis_Symetry.cs
    - Point_Symetry.cs
@@ -28,9 +28,9 @@ Things such as _Gaussian Theorem, Axis symetry, Various mathematical functions_ 
    - Triangle_Controller.cs - $${\color{lightgreen}Needs an update}$$
 3. Other:
    - Representing_Fractions.cs
-   - Area_Calculator.cs - $${\color{lightgreen}Needs an update}$$
-   - Pyramid_Controller.cs - $${\color{blue}In development}$$
-   - Triangle_Fractal.cs - $${\color{blue}In development}$$
+   - Area_Calculator.cs - $${\color{lightgreen}Needs\space an\space update}$$
+   - Pyramid_Controller.cs - $${\color{blue}In\space development}$$
+   - Triangle_Fractal.cs - $${\color{blue}In\space development}$$
    - Pathfinder_1.cs - $${\color{orange}Outdated}$$
    - Pathfinder_2.cs - $${\color{orange}Outdated}$$
    - Pathfinder_3.cs - $${\color{orange}Outdated}$$
