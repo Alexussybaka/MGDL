@@ -37,4 +37,4 @@ Things such as _Gaussian Theorem, Axis symetry, Various mathematical functions_ 
 
 ## How to use MGDL?
 ## Milestones
-[X] Exhibit this project on UŠI FEST
+- [x] Exhibit this project on UŠI FEST
