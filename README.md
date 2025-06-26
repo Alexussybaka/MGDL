@@ -36,3 +36,5 @@ Things such as _Gaussian Theorem, Axis symetry, Various mathematical functions_ 
    - Pathfinder_3.cs - $${\color{orange}Outdated}$$
 
 ## How to use MGDL?
+## Milestones
+[X] Exhibit this project on UŠI FEST
