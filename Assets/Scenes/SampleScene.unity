@@ -180,6 +180,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 705507995}
+  - {fileID: 1421255053}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &332357937
@@ -194,8 +195,9 @@ GameObject:
   - component: {fileID: 332357939}
   - component: {fileID: 332357947}
   - component: {fileID: 332357948}
+  - component: {fileID: 332357949}
   m_Layer: 0
-  m_Name: Mathematics
+  m_Name: Other
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,7 +254,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332357937}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0b8a1e847901ee4c8c3e7e7eb19d429, type: 3}
   m_Name: 
@@ -260,6 +262,20 @@ MonoBehaviour:
   axis_view_multiplier: 0
   axis_vector: {x: 0, y: 0}
   vertexes: []
+--- !u!114 &332357949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332357937}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7167a58faad28ee42a6c148053b0866f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 0
+  scale: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +750,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201477565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 834e4d84ec64ee64fa9c23279a232a3b, type: 3}
   m_Name: 
@@ -766,59 +782,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421255052}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4125975139319460770}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2134727709
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2134727711}
-  - component: {fileID: 2134727710}
-  m_Layer: 0
-  m_Name: Fractals
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2134727710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134727709}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7167a58faad28ee42a6c148053b0866f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stage: 0
-  scale: 1
---- !u!4 &2134727711
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134727709}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 176623772}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4125975139319460769
 PrefabInstance:
@@ -936,8 +906,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 176623772}
   - {fileID: 17969757}
-  - {fileID: 1421255053}
   - {fileID: 1201477566}
   - {fileID: 332357938}
-  - {fileID: 2134727711}
   - {fileID: 770761930}
