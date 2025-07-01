@@ -38,3 +38,4 @@ Things such as _Gaussian Theorem, Axis symetry, Various mathematical functions_ 
 ## How to use MGDL?
 ## Milestones
 - [x] Exhibit this project on [UŠI FEST](https://www.usifest.cz/)
+- [ ] Create a pull-request for Blender's Mirror modifier to add axis symetry
