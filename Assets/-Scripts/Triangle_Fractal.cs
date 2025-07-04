@@ -16,7 +16,8 @@ public class Triangle_Fractal : MonoBehaviour
         for (int i = 0; i < Mathf.Pow(2, stage - 1); i++)
         {
             Debug.DrawLine(new Vector3(i * basic_triangle_length, 0, 0), new Vector3((i + 1) * basic_triangle_length, 0, 0));
-            
+            Debug.DrawLine(new Vector3(i * basic_triangle_length, 0, 0), new Vector3((i * basic_triangle_length) + (basic_triangle_length / 2), basic_triangle_height, 0));
+            Debug.DrawLine(new Vector3((i + 1) * basic_triangle_length, 0, 0), new Vector3((i * basic_triangle_length) + (basic_triangle_length / 2), basic_triangle_height, 0));
         }
     }
 }
