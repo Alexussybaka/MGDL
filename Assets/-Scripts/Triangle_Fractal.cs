@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Triangle_Fractal : MonoBehaviour
 {
+    /// <summary>
+    /// This code is supposed to render serpinsky triangle, but for now this code just renders a big triangle with bunch triangles inside it.
+    /// </summary>
+
+    [Range(1, 10)]
     [SerializeField] int stage;
     [SerializeField] float size;
 
