@@ -28,6 +28,11 @@ public class Pyramid_Controller : MonoBehaviour
             Debug.DrawLine(new Vector3(width / 2 - width_step * i, step_height * i, -width / 2 + width_step * i), new Vector3(-width / 2 + width_step * i, step_height * i, -width / 2 + width_step * i));
             Debug.DrawLine(new Vector3(-width / 2 + width_step * i, step_height * i, -width / 2 + width_step * i), new Vector3(-width / 2 + width_step * i, step_height * i, width / 2 - width_step * i));
             Debug.DrawLine(new Vector3(-width / 2 + width_step * i, step_height * i, width / 2 - width_step * i), new Vector3(width / 2 - width_step * i, step_height * i, width / 2 - width_step * i));
+
+            Debug.DrawLine(new Vector3(width / 2 - width_step * i, step_height * i, width / 2 - width_step * i), new Vector3(width / 2 - width_step * i, step_height * (i + 1), width / 2 - width_step * i));
+            Debug.DrawLine(new Vector3(width / 2 - width_step * i, step_height * i, -width / 2 + width_step * i), new Vector3(width / 2 - width_step * i, step_height * (i + 1), -width / 2 + width_step * i));
+            Debug.DrawLine(new Vector3(-width / 2 + width_step * i, step_height * i, -width / 2 + width_step * i), new Vector3(-width / 2 + width_step * i, step_height * (i + 1), -width / 2 + width_step * i));
+            Debug.DrawLine(new Vector3(-width / 2 + width_step * i, step_height * i, width / 2 - width_step * i), new Vector3(-width / 2 + width_step * i, step_height * (i + 1), width / 2 - width_step * i));
         }
 
         for (int j = 1; j < stairs_count + 1; j++)
