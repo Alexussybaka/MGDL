@@ -7,6 +7,7 @@ public class Pyramid_Controller : MonoBehaviour
     [Header("Pyramid Settings")]
     [SerializeField] float height;
     [SerializeField] float width;
+    [Range(0, 100)]
     [SerializeField] int stairs_count;
 
     private void Update()
@@ -35,11 +36,6 @@ public class Pyramid_Controller : MonoBehaviour
             Debug.DrawLine(new Vector3(width / 2 - width_step * (j - 1), step_height * j, -width / 2 + width_step * (j - 1)), new Vector3(-width / 2 + width_step * (j - 1), step_height * j, -width / 2 + width_step * (j - 1)));
             Debug.DrawLine(new Vector3(-width / 2 + width_step * (j - 1), step_height * j, -width / 2 + width_step * (j - 1)), new Vector3(-width / 2 + width_step * (j - 1), step_height * j, width / 2 - width_step * (j - 1)));
             Debug.DrawLine(new Vector3(-width / 2 + width_step * (j - 1), step_height * j, width / 2 - width_step * (j - 1)), new Vector3(width / 2 - width_step * (j - 1), step_height * j, width / 2 - width_step * (j - 1)));
-        }
-
-        for (int f = 0; f < stairs_count; f++)
-        {
-            Debug.DrawLine(new Vector3(), new Vector3());
         }
     }
 }
