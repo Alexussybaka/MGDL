@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pyramid_Controller : MonoBehaviour
 {
     [Header("Pyramid Settings")]
+    [SerializeField] Vector3 pyramid_position;
     [SerializeField] float height;
     [SerializeField] float width;
     [Range(0, 100)]
@@ -13,10 +14,21 @@ public class Pyramid_Controller : MonoBehaviour
     private void Update()
     {
         //Draw initial square
-        Debug.DrawLine(new Vector3(width / 2, 0, width / 2), new Vector3(width / 2, 0, -width / 2));
-        Debug.DrawLine(new Vector3(width / 2, 0, -width / 2), new Vector3(-width / 2, 0, -width / 2));
-        Debug.DrawLine(new Vector3(-width / 2, 0, -width / 2), new Vector3(-width / 2, 0, width / 2));
-        Debug.DrawLine(new Vector3(-width / 2, 0, width / 2), new Vector3(width / 2, 0, width / 2));
+        Debug.DrawLine(
+            new Vector3(width / 2 + pyramid_position.x, 0 + pyramid_position.y, width / 2 + pyramid_position.z), 
+            new Vector3(width / 2 + pyramid_position.x, 0 + pyramid_position.y, -width / 2 + pyramid_position.z));
+
+        Debug.DrawLine(
+            new Vector3(width / 2 + pyramid_position.x, 0 + pyramid_position.y, -width / 2 + pyramid_position.z), 
+            new Vector3(-width / 2 + pyramid_position.x, 0 + pyramid_position.y, -width / 2 + pyramid_position.z));
+        
+        Debug.DrawLine(
+            new Vector3(-width / 2 + pyramid_position.x, 0 + pyramid_position.y, -width / 2 + pyramid_position.z), 
+            new Vector3(-width / 2 + pyramid_position.x, 0 + pyramid_position.y, width / 2 + pyramid_position.z));
+        
+        Debug.DrawLine(
+            new Vector3(-width / 2 + pyramid_position.x, 0 + pyramid_position.y, width / 2 + pyramid_position.z), 
+            new Vector3(width / 2 + pyramid_position.x, 0 + pyramid_position.y, width / 2 + pyramid_position.z));
 
         //
         float step_height = (height / 2) / stairs_count;
