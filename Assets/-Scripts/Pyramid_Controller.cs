@@ -91,10 +91,21 @@ public class Pyramid_Controller : MonoBehaviour
 
         for (int j = 1; j < stairs_count + 1; j++)
         {
-            Debug.DrawLine(new Vector3(width / 2 - width_step * (j - 1), step_height * j, width / 2 - width_step * (j - 1)), new Vector3(width / 2 - width_step * (j - 1), step_height * j, -width / 2 + width_step * (j - 1)));
-            Debug.DrawLine(new Vector3(width / 2 - width_step * (j - 1), step_height * j, -width / 2 + width_step * (j - 1)), new Vector3(-width / 2 + width_step * (j - 1), step_height * j, -width / 2 + width_step * (j - 1)));
-            Debug.DrawLine(new Vector3(-width / 2 + width_step * (j - 1), step_height * j, -width / 2 + width_step * (j - 1)), new Vector3(-width / 2 + width_step * (j - 1), step_height * j, width / 2 - width_step * (j - 1)));
-            Debug.DrawLine(new Vector3(-width / 2 + width_step * (j - 1), step_height * j, width / 2 - width_step * (j - 1)), new Vector3(width / 2 - width_step * (j - 1), step_height * j, width / 2 - width_step * (j - 1)));
+            Debug.DrawLine(
+                new Vector3(width / 2 - width_step * (j - 1) + pyramid_position.x, step_height * j + pyramid_position.y, width / 2 - width_step * (j - 1) + pyramid_position.z), 
+                new Vector3(width / 2 - width_step * (j - 1) + pyramid_position.x, step_height * j + pyramid_position.y, -width / 2 + width_step * (j - 1) + pyramid_position.z));
+            
+            Debug.DrawLine(
+                new Vector3(width / 2 - width_step * (j - 1) + pyramid_position.x, step_height * j + pyramid_position.y, -width / 2 + width_step * (j - 1) + pyramid_position.z), 
+                new Vector3(-width / 2 + width_step * (j - 1) + pyramid_position.x, step_height * j + pyramid_position.y, -width / 2 + width_step * (j - 1) + pyramid_position.z));
+            
+            Debug.DrawLine(
+                new Vector3(-width / 2 + width_step * (j - 1) + pyramid_position.x, step_height * j + pyramid_position.y, -width / 2 + width_step * (j - 1) + pyramid_position.z), 
+                new Vector3(-width / 2 + width_step * (j - 1) + pyramid_position.x, step_height * j + pyramid_position.y, width / 2 - width_step * (j - 1) + pyramid_position.z));
+            
+            Debug.DrawLine(
+                new Vector3(-width / 2 + width_step * (j - 1) + pyramid_position.x, step_height * j + pyramid_position.y, width / 2 - width_step * (j - 1) + pyramid_position.z), 
+                new Vector3(width / 2 - width_step * (j - 1) + pyramid_position.x, step_height * j + pyramid_position.y, width / 2 - width_step * (j - 1) + pyramid_position.z));
         }
     }
 }
