@@ -55,20 +55,20 @@ public class Pyramid_Controller : MonoBehaviour
             //
 
             Debug.DrawLine(
-                new Vector3(width / 2 - width_step * i, step_height * i, width / 2 - width_step * i), 
-                new Vector3(width / 2 - width_step * i, step_height * (i + 1), width / 2 - width_step * i));
+                new Vector3(width / 2 - width_step * i + pyramid_position.x, step_height * i + pyramid_position.y, width / 2 - width_step * i + pyramid_position.z), 
+                new Vector3(width / 2 - width_step * i + pyramid_position.x, step_height * (i + 1) + pyramid_position.y, width / 2 - width_step * i + pyramid_position.z));
             
             Debug.DrawLine(
-                new Vector3(width / 2 - width_step * i, step_height * i, -width / 2 + width_step * i), 
-                new Vector3(width / 2 - width_step * i, step_height * (i + 1), -width / 2 + width_step * i));
+                new Vector3(width / 2 - width_step * i + pyramid_position.x, step_height * i + pyramid_position.y, -width / 2 + width_step * i + pyramid_position.z), 
+                new Vector3(width / 2 - width_step * i + pyramid_position.x, step_height * (i + 1) + pyramid_position.y, -width / 2 + width_step * i + pyramid_position.z));
             
             Debug.DrawLine(
-                new Vector3(-width / 2 + width_step * i, step_height * i, -width / 2 + width_step * i), 
-                new Vector3(-width / 2 + width_step * i, step_height * (i + 1), -width / 2 + width_step * i));
+                new Vector3(-width / 2 + width_step * i + pyramid_position.x, step_height * i + pyramid_position.y, -width / 2 + width_step * i + pyramid_position.z), 
+                new Vector3(-width / 2 + width_step * i + pyramid_position.x, step_height * (i + 1) + pyramid_position.y, -width / 2 + width_step * i + pyramid_position.z));
             
             Debug.DrawLine(
-                new Vector3(-width / 2 + width_step * i, step_height * i, width / 2 - width_step * i), 
-                new Vector3(-width / 2 + width_step * i, step_height * (i + 1), width / 2 - width_step * i));
+                new Vector3(-width / 2 + width_step * i + pyramid_position.x, step_height * i + pyramid_position.y, width / 2 - width_step * i + pyramid_position.z), 
+                new Vector3(-width / 2 + width_step * i + pyramid_position.x, step_height * (i + 1) + pyramid_position.y, width / 2 - width_step * i + pyramid_position.z));
             
             //
 
