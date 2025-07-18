@@ -7,7 +7,7 @@ public class Secant_Function : MonoBehaviour
     [Header("Graph Settings")]
     [SerializeField] bool show_axis;
     [SerializeField] float limit;
-    [Range(0.05f, 5f)]
+    [Range(0.01f, 5f)]
     [SerializeField] float resolution;
 
     [Space]
@@ -33,7 +33,10 @@ public class Secant_Function : MonoBehaviour
         // Plotting the function
         for (int i = 0; i < vectors.Count - 1; i++)
         {
-            Debug.DrawLine(vectors[i], vectors[i + 1]);
+            if ((vectors[i].z > 0f && vectors[i + 1].z < 0f) 
+                || (vectors[i].z < 0f && vectors[i + 1].z > 0f)) continue;
+            
+            else Debug.DrawLine(vectors[i], vectors[i + 1]);
         }
 
         vectors.Clear();
