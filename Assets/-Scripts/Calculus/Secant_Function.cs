@@ -27,15 +27,15 @@ public class Secant_Function : MonoBehaviour
         // Calculating this function with it's limit
         for (float i = -limit; i < limit; i += resolution)
         {
-            vectors.Add(new Vector3(i, 0f, 1 / Mathf.Cos(i)));
+            if(Mathf.Abs(1 / Mathf.Cos(i)) <= limit) vectors.Add(new Vector3(i, 0f, 1 / Mathf.Cos(i)));
         }
 
         // Plotting the function
         for (int i = 0; i < vectors.Count - 1; i++)
         {
-            if ((vectors[i].z > 0f && vectors[i + 1].z < 0f) 
+            if ((vectors[i].z > 0f && vectors[i + 1].z < 0f)
                 || (vectors[i].z < 0f && vectors[i + 1].z > 0f)) continue;
-            
+
             else Debug.DrawLine(vectors[i], vectors[i + 1]);
         }
 
@@ -68,7 +68,7 @@ public class Secant_Function : MonoBehaviour
         else
         {
             // Calculating evaluation for the analyzed number
-            evaluation = Mathf.Sin(number);
+            evaluation = 1 / Mathf.Cos(number);
 
             // Visualising analyzed number value on Y axis
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
@@ -89,8 +89,8 @@ public class Secant_Function : MonoBehaviour
         if (show_axis)
         {
             // Plotting X and Y axis
-            Debug.DrawLine(new Vector3(-(limit * limit), 0, 0), new Vector3(limit * limit, 0, 0));
-            Debug.DrawLine(new Vector3(0, 0, -(limit * limit)), new Vector3(0, 0, limit * limit));
+            Debug.DrawLine(new Vector3(-limit, 0, 0), new Vector3(limit, 0, 0));
+            Debug.DrawLine(new Vector3(0, 0, -limit), new Vector3(0, 0, limit));
         }
     }
 }

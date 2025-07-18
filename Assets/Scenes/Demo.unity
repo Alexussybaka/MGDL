@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 553417850}
   - component: {fileID: 553417849}
   - component: {fileID: 553417848}
+  - component: {fileID: 553417860}
   m_Layer: 0
   m_Name: Calculus
   m_TagString: Untagged
@@ -578,6 +579,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &553417860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553417847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede1f16f85c433b46a98f2add5595946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show_axis: 0
+  limit: 0
+  resolution: 0.05
+  number: 0
+  radians: 0
+  evaluation: 0
 --- !u!1 &619734813
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 834e4d84ec64ee64fa9c23279a232a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pyramid_position: {x: 0, y: 0, z: 0}
   height: 2.21
   width: 2.95
   stairs_count: 5
