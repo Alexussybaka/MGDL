@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Secant_Function : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Graph Settings")]
+    [SerializeField] bool show_axis;
+    [SerializeField] float limit;
+    [Range(0.05f, 5f)]
+    [SerializeField] float resolution;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Space]
+    [Header("Analyzed Number")]
+    [SerializeField] float number;
+    [SerializeField] bool radians;
+    [Space]
+    [SerializeField] float evaluation;
+
+    private List<Vector3> vectors = new List<Vector3>();
 }
