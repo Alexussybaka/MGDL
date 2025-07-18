@@ -2,7 +2,7 @@
 ## Mathematic Game Development Library
 
 Welcome to MGDL! 
-This is a mathematical library made **_from game developers_ to _game developers_** so **YOU** can easily inegrate mathematical logic and features into your project. Everything in this project is well documented and comented so **YOU** can understand how and why does it work. **MGDL** is built on Unity due to it's big popularity in indie game development. Unity's editor version for project is **_[[2023.2.19f1](https://unity.com/releases/editor/archive)]_** but it may be updated in future.
+This is a mathematical library made **_from game developers_ to _game developers_** so **YOU** can easily integrate mathematical logic and features into your project. Everything in this project is well documented and comented so **YOU** can understand how and why does it work. **MGDL** is built on Unity due to it's big popularity in indie game development. Unity's editor version for project is **_[[2023.2.19f1](https://unity.com/releases/editor/archive)]_** but it may be updated in future.
 <!-- Link to useful info page -->
 
 ## List of all features:
@@ -14,6 +14,8 @@ Things such as _Gaussian Theorem, Axis symetry, Various mathematical functions_ 
    - Cosine_Function.cs
    - Tangent_Function.cs
    - Cotangent_Function.cs
+   - Secant_Function.cs
+   - Cosecant_Function.cs
    - Logarythmic_Function.cs
    - Exponentional_Function.cs
    - Quadratic_Function.cs - $${\color{lightgreen}Needs\space an\space update}$$
@@ -37,5 +39,5 @@ Things such as _Gaussian Theorem, Axis symetry, Various mathematical functions_ 
 
 ## How to use MGDL?
 ## Milestones
-- [x] Exhibit this project on [UŠI FEST](https://www.usifest.cz/)
+- [x] Exhibit this project on [UŠI FEST](https://www.usifest.cz/) 2025
 - [ ] Create a pull-request for Blender's Mirror modifier to add axis symetry
