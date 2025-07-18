@@ -26,7 +26,7 @@ public class Sigmoid_Function : MonoBehaviour // Also known as Logistics Functio
         // Calculating this function with it's limit
         for (float i = -limit; i < limit; i += resolution)
         {
-            if (Mathf.Abs(1 / Mathf.Sin(i)) <= limit) vectors.Add(new Vector3(i, 0f, 1 / Mathf.Sin(i)));
+            if (Mathf.Abs(1 / (1 + Mathf.Pow(2.71828182846f, -i))) <= limit) vectors.Add(new Vector3(i, 0f, 1 / (1 + Mathf.Pow(2.71828182846f, -i))));
         }
 
         // Plotting the function
@@ -48,7 +48,7 @@ public class Sigmoid_Function : MonoBehaviour // Also known as Logistics Functio
     public void Visualise_Examined_Number()
     {
         // Calculating evaluation for the analyzed number
-        evaluation = 1 / Mathf.Sin(number * Mathf.PI);
+        evaluation = 1 / (1 + Mathf.Pow(2.71828182846f, -number));
 
         // Visualising analyzed number value on Y axis
         if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
