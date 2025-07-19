@@ -36,7 +36,8 @@ public class Hyperbolic_Cotangent_Function : MonoBehaviour
         // Plotting the function
         for (int i = 0; i < vectors.Count - 1; i++)
         {
-            Debug.DrawLine(vectors[i], vectors[i + 1]);
+            if (vectors[i].z < 0f && vectors[i + 1].z > 0f) continue;
+            else Debug.DrawLine(vectors[i], vectors[i + 1]);
         }
 
         vectors.Clear();
