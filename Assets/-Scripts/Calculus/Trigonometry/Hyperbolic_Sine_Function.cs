@@ -19,6 +19,8 @@ public class Hyperbolic_Sine_Function : MonoBehaviour
 
     private List<Vector3> vectors = new List<Vector3>();
 
+    const float e = 2.71828f;
+
     private void Update()
     {
         // Clamping limit to always be a positive number
@@ -27,7 +29,8 @@ public class Hyperbolic_Sine_Function : MonoBehaviour
         // Calculating this function with it's limit
         for (float i = -limit; i < limit; i += resolution)
         {
-            vectors.Add(new Vector3(i, 0f, Mathf.Sin(i)));
+            float eval = (Mathf.Pow(e, i) - Mathf.Pow(e, -i)) / 2;
+            if (Mathf.Abs(eval) <= limit)vectors.Add(new Vector3(i, 0f, eval));
         }
 
         // Plotting the function
@@ -48,7 +51,7 @@ public class Hyperbolic_Sine_Function : MonoBehaviour
         if (eulers)
         {
             // Calculating evaluation for the analyzed number
-            evaluation = Mathf.Sin(number * Mathf.PI);
+            evaluation = (Mathf.Pow(e, number * e) - Mathf.Pow(e, -number * e)) / 2;
 
             // Visualising analyzed number value on Y axis
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number * Mathf.PI, 0f, 0f), new Vector3(number * Mathf.PI, 0f, -0.5f), Color.red);
@@ -65,7 +68,7 @@ public class Hyperbolic_Sine_Function : MonoBehaviour
         else
         {
             // Calculating evaluation for the analyzed number
-            evaluation = Mathf.Sin(number);
+            evaluation = (Mathf.Pow(e, number) - Mathf.Pow(e, -number)) / 2;
 
             // Visualising analyzed number value on Y axis
             if (evaluation >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
