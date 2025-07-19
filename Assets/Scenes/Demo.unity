@@ -361,6 +361,10 @@ GameObject:
   - component: {fileID: 553417862}
   - component: {fileID: 553417863}
   - component: {fileID: 553417864}
+  - component: {fileID: 553417868}
+  - component: {fileID: 553417867}
+  - component: {fileID: 553417866}
+  - component: {fileID: 553417865}
   m_Layer: 0
   m_Name: Calculus
   m_TagString: Untagged
@@ -664,6 +668,78 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd20e410f5215594aa26a510965dfc8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show_axis: 0
+  limit: 0
+  resolution: 0.05
+  number: 0
+  eulers: 0
+  evaluation: 0
+--- !u!114 &553417865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553417847}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8817448a63d24041b5b42edb6958ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show_axis: 0
+  limit: 0
+  resolution: 0
+  number: 0
+  eulers: 0
+  evaluation: 0
+--- !u!114 &553417866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553417847}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8dde94a7febcda44ae4e4a13af05a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show_axis: 0
+  limit: 0
+  resolution: 0
+  number: 0
+  eulers: 0
+  evaluation: 0
+--- !u!114 &553417867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553417847}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f856e13c7d971d47a6644ca916f31fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  show_axis: 0
+  limit: 0
+  resolution: 0
+  number: 0
+  eulers: 0
+  evaluation: 0
+--- !u!114 &553417868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553417847}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a73578501b1550458869474679b6ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   show_axis: 0
