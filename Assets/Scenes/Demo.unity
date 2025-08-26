@@ -477,7 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65effb5fa2d007046a9059f14b4f0dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 0
+  a: 0
+  b: 0
+  c: 0
   show_axis: 0
   limit: 0
   resolution: 0.05
@@ -690,7 +692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   show_axis: 0
   limit: 0
-  resolution: 0
+  resolution: 0.05
   number: 0
   eulers: 0
   evaluation: 0
@@ -708,7 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   show_axis: 0
   limit: 0
-  resolution: 0
+  resolution: 0.05
   number: 0
   eulers: 0
   evaluation: 0
@@ -726,7 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   show_axis: 0
   limit: 0
-  resolution: 0
+  resolution: 0.05
   number: 0
   eulers: 0
   evaluation: 0
@@ -744,7 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   show_axis: 0
   limit: 0
-  resolution: 0
+  resolution: 0.05
   number: 0
   eulers: 0
   evaluation: 0
@@ -928,10 +930,10 @@ MonoBehaviour:
   C: {x: 0, y: 0}
   in_center: {x: 0, y: 0, z: 0}
   in_radius: 0
-  in_subdivision_count: 0
+  in_subdivision_count: 1
   ci_center: {x: 0, y: 0, z: 0}
   ci_radius: 0
-  ci_subdivision_count: 0
+  ci_subdivision_count: 1
 --- !u!114 &1154519972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,7 +949,7 @@ MonoBehaviour:
   angle: 0
   radius: 0
   draw_circle: 0
-  subdivision_count: 0
+  subdivision_count: 1
 --- !u!114 &1154519973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,7 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19161dbbe6f1dc47a78d37a6d360abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subdivisions_count: 0
+  subdivisions_count: 1
   show_subdivisions: 0
   radius: 0
   center: {x: 0, y: 0, z: 0}
