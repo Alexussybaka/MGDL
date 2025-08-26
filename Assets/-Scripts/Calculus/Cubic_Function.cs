@@ -5,6 +5,11 @@ using UnityEngine;
 public class Cubic_Function : MonoBehaviour
 {
     [Header("Graph Settings")]
+    [Header("y = ax^3 + bx^2 + cx + d")]
+    [SerializeField] float a;
+    [SerializeField] float b;
+    [SerializeField] float c;
+    [SerializeField] float d;
     [SerializeField] bool horizontal;
     [SerializeField] bool show_axis;
     [SerializeField] float limit;
@@ -29,18 +34,10 @@ public class Cubic_Function : MonoBehaviour
 
     public void Update()
     {
-        // Created all negative points to draw line using them.
-        for (float i = -limit; i < 0; i += resolution)
+        // Created all points to draw line.
+        for (float i = -limit; i < limit; i += resolution)
         {
-            if (horizontal) vectors.Add(new Vector3(i, 0f, Mathf.Pow(i, 3)));
-            else vectors.Add(new Vector3(Mathf.Pow(i, 3), 0f, i));
-        }
-
-        // Created all positive points to draw line using them.
-        for (float i = 0; i < limit; i += resolution)
-        {
-            if (horizontal) vectors.Add(new Vector3(i, 0f, Mathf.Pow(i, 3)));
-            else vectors.Add(new Vector3(Mathf.Pow(i, 3), 0f, i));
+            vectors.Add(new Vector3(i, 0f, (a * Mathf.Pow(i, 3)) + (b * Mathf.Pow(i, 2)) + (c * i) + d));
         }
 
         // Drawing all lines
@@ -54,84 +51,43 @@ public class Cubic_Function : MonoBehaviour
 
         Visualise_Examined_Number();
         Show_Axis();
-
     }
 
     public void Visualise_Examined_Number()
     {
-        if (horizontal)
+        if (is_cubed)
         {
-            if (is_cubed)
-            {
-                // Visualising analyzed number value on Y axis
-                if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
-                else Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(0.5f, 0f, number), Color.red);
+            // Calculating evaluation for the analyzed number
+            evaluation = CubeRoot((a * Mathf.Pow(number, 3)) + (b * Mathf.Pow(number, 2)) + (c * number) + d);
 
-                // Visualising analyzed number value on X axis
-                if (number >= 0) Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, -0.5f), Color.blue);
-                else Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, 0.5f), Color.blue);
+            // Visualising analyzed number value on Y axis
+            if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
+            else Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(0.5f, 0f, number), Color.red);
 
-                // Rendering lines that point evaluation on the graph
-                Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(CubeRoot(number), 0f, number), Color.green);
-                Debug.DrawLine(new Vector3(CubeRoot(number), 0f, number), new Vector3(CubeRoot(number), 0f, 0f), Color.green);
+            // Visualising analyzed number value on X axis
+            if (number >= 0) Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, -0.5f), Color.blue);
+            else Debug.DrawLine(new Vector3(CubeRoot(number), 0f, 0f), new Vector3(CubeRoot(number), 0f, 0.5f), Color.blue);
 
-                // Calculating evaluation for the analyzed number
-                evaluation = CubeRoot(number);
-            }
-            else
-            {
-                // Visualising analyzed number value on Y axis
-                if (number >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
-                else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
-
-                // Visualising analyzed number value on X axis
-                if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, Mathf.Pow(number, 3)), new Vector3(-0.5f, 0f, Mathf.Pow(number, 3)), Color.blue);
-                else Debug.DrawLine(new Vector3(0f, 0f, Mathf.Pow(number, 3)), new Vector3(0.5f, 0f, Mathf.Pow(number, 3)), Color.blue);
-
-                // Rendering lines that point evaluation on the graph
-                Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, Mathf.Pow(number, 3)), Color.green);
-                Debug.DrawLine(new Vector3(number, 0f, Mathf.Pow(number, 3)), new Vector3(0f, 0f, Mathf.Pow(number, 3)), Color.green);
-
-                // Calculating evaluation for the analyzed number
-                evaluation = Mathf.Pow(number, 3);
-            }
+            // Rendering lines that point evaluation on the graph
+            Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(CubeRoot(number), 0f, number), Color.green);
+            Debug.DrawLine(new Vector3(CubeRoot(number), 0f, number), new Vector3(CubeRoot(number), 0f, 0f), Color.green);
         }
         else
         {
-            if (is_cubed)
-            {
-                // Visualising analyzed number value on Y axis
-                if (number >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
-                else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
+            // Calculating evaluation for the analyzed number
+            evaluation = (a * Mathf.Pow(number, 3)) + (b * Mathf.Pow(number, 2)) + (c * number) + d;
 
-                // Visualising analyzed number value on X axis
-                if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, CubeRoot(number)), new Vector3(-0.5f, 0f, CubeRoot(number)), Color.blue);
-                else Debug.DrawLine(new Vector3(0f, 0f, CubeRoot(number)), new Vector3(0.5f, 0f, CubeRoot(number)), Color.blue);
+            // Visualising analyzed number value on Y axis
+            if (number >= 0) Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, -0.5f), Color.red);
+            else Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, 0.5f), Color.red);
 
-                // Rendering lines that point evaluation on the graph
-                Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, CubeRoot(number)), Color.green);
-                Debug.DrawLine(new Vector3(number, 0f, CubeRoot(number)), new Vector3(0f, 0f, CubeRoot(number)), Color.green);
+            // Visualising analyzed number value on X axis
+            if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(-0.5f, 0f, evaluation), Color.blue);
+            else Debug.DrawLine(new Vector3(0f, 0f, evaluation), new Vector3(0.5f, 0f, evaluation), Color.blue);
 
-                // Calculating evaluation for the analyzed number
-                evaluation = CubeRoot(number);
-            }
-            else
-            {
-                // Visualising analyzed number value on Y axis
-                if (number >= 0) Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(-0.5f, 0f, number), Color.red);
-                else Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(0.5f, 0f, number), Color.red);
-
-                // Visualising analyzed number value on X axis
-                if (number >= 0) Debug.DrawLine(new Vector3(Mathf.Pow(number, 3), 0f, 0f), new Vector3(Mathf.Pow(number, 3), 0f, -0.5f), Color.blue);
-                else Debug.DrawLine(new Vector3(Mathf.Pow(number, 3), 0f, 0f), new Vector3(Mathf.Pow(number, 3), 0f, 0.5f), Color.blue);
-
-                // Rendering lines that point evaluation on the graph
-                Debug.DrawLine(new Vector3(0f, 0f, number), new Vector3(Mathf.Pow(number, 3), 0f, number), Color.green);
-                Debug.DrawLine(new Vector3(Mathf.Pow(number, 3), 0f, number), new Vector3(Mathf.Pow(number, 3), 0f, 0f), Color.green);
-
-                // Calculating evaluation for the analyzed number
-                evaluation = Mathf.Pow(number, 3);
-            }
+            // Rendering lines that point evaluation on the graph
+            Debug.DrawLine(new Vector3(number, 0f, 0f), new Vector3(number, 0f, evaluation), Color.green);
+            Debug.DrawLine(new Vector3(number, 0f, evaluation), new Vector3(0f, 0f, evaluation), Color.green);
         }
     }
 
