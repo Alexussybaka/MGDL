@@ -19,7 +19,7 @@ Things such as _Gaussian Theorem, Axis symetry, Various mathematical functions_ 
    - Logarythmic_Function.cs
    - Exponentional_Function.cs
    - Quadratic_Function.cs - $${\color{lightgreen}Needs\space an\space update}$$
-   - Cubic_Function.cs - $${\color{lightgreen}Needs\space an\space update}$$
+   - Cubic_Function.cs
    - Custom_Function.cs - $${\color{blue}In\space development}$$
 2. Geometry:
    - Axis_Symetry.cs
